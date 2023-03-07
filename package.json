@@ -1,0 +1,16 @@
+{
+  "name": "space-travel",
+  "version": "1.0.0",
+  "description": "In this project, we're going to learn how create implement a design system by building a space travel. Happy coding!",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch ./sass/main.scss:css/styles.css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel watch:sass devserver"
+  },
+  "author": "Youssef Ait Bihi",
+  "license": "ISC",
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
