@@ -1,3 +1,75 @@
+:root {
+  --color-primary-dark: 230 35% 7%;
+  --color-primary-light: 231 77% 90%;
+  --color-primary-white: 0 0% 100%;
+  --font-size-900: 15rem;
+  --font-size-800: 10rem;
+  --font-size-700: 5.6rem;
+  --font-size-600: 3.2rem;
+  --font-size-500: 2.8rem;
+  --font-size-400: 1.8rem;
+  --font-size-300: 1.6rem;
+  --font-size-200: 1.4rem;
+  --font-family-primary: "Bellefair", serif;
+  --font-family-secondary-conds: "Barlow Condensed", sans-serif;
+  --font-family-secondary-normal: "Barlow", sans-serif;
+  --letter-spacing-big: 0.475rem;
+  --letter-spacing-medium: 0.27rem;
+  --letter-spacing-small: 0.235rem;
+}
+
+/* ------------------------ */
+/*       Global reset       */
+/* ------------------------ */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family-secondary-conds);
+  font-size: var(--font-size-400);
+  background-color: hsl(var(--color-primary-dark));
+  color: hsl(var(--color-primary-white));
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+textarea,
+button,
+select {
+  font: inherit;
+}
+
+textarea {
+  white-space: revert;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 /* ------------------------ */
 /*           GRID           */
 /* ------------------------ */
@@ -10,7 +82,6 @@
 /* ------------------------ */
 /*       SCREEN READER      */
 /* ------------------------ */
-// Elements Only Visible to a Screen Reader
 .sr-only {
   position: absolute;
   width: 1px;
@@ -115,3 +186,5 @@
 .letter-spacing-small {
   letter-spacing: var(--letter-spacing-small);
 }
+
+/*# sourceMappingURL=styles.css.map */

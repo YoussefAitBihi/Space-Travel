@@ -1,1 +1,13 @@
+# Avoid the node modules
 node_modules/
+
+# Avoid the prettier configuration
+.prettierrc
+
+# Avoid accidental upload of the sketch, figma and/or xd design files
+*.fig
+*.sketch
+*.xd
+
+# Avoid .DS_Store files!
+.DS_Store
