@@ -1,7 +1,7 @@
 {
   "name": "space-travel",
   "version": "1.0.0",
-  "description": "In this project, we're going to learn how create implement a design system by building a space travel. Happy coding!",
+  "description": "In this project, we're going to learn how create and implement a design system by building a space travel. Happy coding!",
   "main": "index.js",
   "scripts": {
     "watch:sass": "sass --watch ./sass/main.scss:css/styles.css",
