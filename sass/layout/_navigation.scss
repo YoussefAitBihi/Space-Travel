@@ -1,0 +1,14 @@
+/* ------------------------ */
+/*    PRIMARY NAVIGATION    */
+/* ------------------------ */
+.primary-navigation {
+  background-color: hsl(var(--color-primary-white) / 0.04);
+
+  &__list {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+    --gap: 8rem;
+  }
+}

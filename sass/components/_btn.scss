@@ -1,0 +1,45 @@
+.btn {
+  position: relative;
+  z-index: 1;
+
+  &:link,
+  &:visited {
+    display: grid;
+    place-items: center;
+
+    text-decoration: none;
+    padding-inline: 2em; // 1em = font-size value
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    z-index: -1;
+
+    width: 100%;
+    height: 100%;
+    background-color: hsl(var(--color-primary-white) / 0.2);
+    border-radius: inherit;
+  }
+
+  &:hover::after,
+  &:focus::after {
+    animation: scale 0.7s infinite ease-in;
+  }
+
+  @keyframes scale {
+    0% {
+      // It's a best practice to use transform to animate my button instead of width/height, because with these can cause a lot of problem such repainting and reflowing, and the GPU accelerated
+      transform: scale(1);
+      opacity: 1;
+    }
+
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+}
