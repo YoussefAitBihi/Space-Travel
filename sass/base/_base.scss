@@ -17,13 +17,13 @@ html {
   box-sizing: border-box;
 }
 
-body {
-  font-family: var(--font-family-secondary-conds);
-  font-size: var(--font-size-400);
-  background-color: hsl(var(--color-primary-dark));
-  color: hsl(var(--color-primary-white));
-  line-height: 1.5; // 1.4 default value
-  min-height: 100vh; // Because we're not going to scrolling in this project
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
 }
 
 // Make images easier to work with

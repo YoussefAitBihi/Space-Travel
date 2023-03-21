@@ -7,6 +7,18 @@
   padding-inline: 1.6rem;
 }
 
+.d-flex {
+  display: flex;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.gap {
+  gap: var(--gap);
+}
+
 /* ------------------------ */
 /*       SCREEN READER      */
 /* ------------------------ */
@@ -26,15 +38,15 @@
 /* ------------------------ */
 /*          COLORS          */
 /* ------------------------ */
-.text-primary-dark {
+.text-dark {
   color: hsl(var(--color-primary-dark));
 }
 
-.text-primary-light {
+.text-light {
   color: hsl(var(--color-primary-light));
 }
 
-.text-primary-white {
+.text-white {
   color: hsl(var(--color-primary-white));
 }
 
@@ -56,6 +68,21 @@
 /* ------------------------ */
 /*        TYPOGRAPHY        */
 /* ------------------------ */
+
+// FONT-FAMILIES
+.font-family-primary-normal {
+  font-family: var(--font-family-primary-normal);
+}
+
+.font-family-primary-conds {
+  font-family: var(--font-family-primary-conds);
+}
+
+.font-family-secondary {
+  font-family: var(--font-family-secondary);
+}
+
+// FONT-SIZES
 .font-size-900 {
   font-size: var(--font-size-900);
 }
@@ -84,16 +111,20 @@
   font-size: var(--font-size-300);
 }
 
-.font-family-primary {
-  font-family: var(--font-family-primary);
+.font-size-200 {
+  font-size: var(--font-size-200);
 }
 
-.font-family-secondary-conds {
-  font-family: var(--font-family-secondary-conds);
+.font-size-900,
+.font-size-800,
+.font-size-700,
+.font-size-600 {
+  line-height: 1.1;
 }
 
-.font-family-secondary-normal {
-  font-family: var(--font-family-secondary-normal);
+// FONT-WEIGHTS
+.font-weight-regular {
+  font-weight: 400;
 }
 
 .text-center {

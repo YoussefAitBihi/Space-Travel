@@ -1,4 +1,7 @@
 :root {
+  // Grid
+  --gap: 3rem;
+
   // COLORS
   --color-primary-dark: 230 35% 7%;
   --color-primary-light: 231 77% 90%;
@@ -6,7 +9,13 @@
 
   // TYPOGRAPHY
 
+  // FONT-FAMILIES
+  --font-family-primary-normal: 'Barlow', sans-serif;
+  --font-family-primary-conds: 'Barlow Condensed', sans-serif;
+  --font-family-secondary: 'Bellefair', serif;
+
   // FONT-SIZES
+  // I use rem unit for the accessibility reason. When for example the user increases the font-size value, I want my content scales with the new value
   --font-size-900: 15rem; // 150px
   --font-size-800: 10rem; // 10px
   --font-size-700: 5.6rem; // 56px
@@ -16,13 +25,11 @@
   --font-size-300: 1.6rem; // 16px
   --font-size-200: 1.4rem; // 14px
 
-  // FONT-FAMILIES
-  --font-family-primary: 'Bellefair', serif;
-  --font-family-secondary-conds: 'Barlow Condensed', sans-serif;
-  --font-family-secondary-normal: 'Barlow', sans-serif;
-
   // LETTER SPACING
-  --letter-spacing-big: 0.475rem;
-  --letter-spacing-medium: 0.27rem;
-  --letter-spacing-small: 0.235rem;
+  --letter-spacing-big: 0.475rem; // 4.75px
+  --letter-spacing-medium: 0.27rem; // 2.75px
+  --letter-spacing-small: 0.235rem; // 2.35px
+
+  // SPACING
+  --flow-margin: 3rem;
 }

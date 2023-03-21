@@ -1,0 +1,27 @@
+body {
+  font-family: var(--font-family-primary-normal);
+  font-size: var(--font-size-400);
+  font-weight: 400; // regular (normal)
+  background-color: hsl(var(--color-primary-dark));
+  color: hsl(var(--color-primary-white));
+  line-height: 1.5; // 1.4 default value
+  min-height: 100vh; // Because we're not going to scrolling in this project
+}
+
+// heading-2
+.heading-2 {
+  & > span {
+    color: hsl(var(--color-primary-white) / 0.2);
+    margin-right: 2rem;
+  }
+}
+
+// Select every element has an adjacent sibling before it with Lobotomized Owls
+// This approach keeps the same specificity because the * selector has no specificity
+// Instead of using .flow > *:not(:last-child) because the inside :not pseudo-class there is a specificity and this can make hard to change it.
+// We can use the :where because the inside of it there is no specificity
+// :is() The selector inside the first one has a specificity
+// :where() The selector inside the first one has no specificity
+.flow > * + * {
+  margin-bottom: var(--flow-margin);
+}
