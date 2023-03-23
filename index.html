@@ -246,29 +246,44 @@
               >explore</a
             >
           </div>
-          <div
-            class="secondary-navigation d-flex gap"
-            style="flex-basis: 100%; align-items: flex-start"
-            data-tab="tab-links-parent"
-          >
-            <button
-              class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+          <div>
+            <div
+              class="secondary-navigation d-flex gap"
+              style="flex-basis: 100%; align-items: flex-start"
+              data-tab="tab-links-parent"
             >
-              moon
-              <span
-                class="tab-link__underline tab-link__underline--scaled"
-              ></span></button
-            ><button
-              class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
-            >
-              mars
-              <span class="tab-link__underline"></span></button
-            ><button
-              class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
-            >
-              europa
-              <span class="tab-link__underline"></span>
-            </button>
+              <button
+                aria-selected="true"
+                class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+              >
+                moon
+                <span class="tab-link__underline tab-link__underline--scaled">
+                </span></button
+              ><button
+                aria-selected="false"
+                class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+              >
+                mars
+                <span class="tab-link__underline"></span></button
+              ><button
+                aria-selected="false"
+                class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+              >
+                europa
+                <span class="tab-link__underline"></span>
+              </button>
+            </div>
+            <div class="dots d-flex gap" style="margin-top: 10rem">
+              <button aria-selected="true" class="dots__dot">
+                <span class="sr-only">Slide title</span>
+              </button>
+              <button aria-selected="false" class="dots__dot">
+                <span class="sr-only">Slide title</span>
+              </button>
+              <button aria-selected="false" class="dots__dot">
+                <span class="sr-only">Slide title</span>
+              </button>
+            </div>
           </div>
         </div>
       </section>

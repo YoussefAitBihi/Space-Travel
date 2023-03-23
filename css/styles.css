@@ -253,11 +253,6 @@ body {
   --gap: 8rem;
 }
 
-.color__hex {
-  padding: 5rem 0 2rem 2rem;
-  border: 1px solid hsl(var(--color-primary-light)/0.2);
-}
-
 .btn {
   position: relative;
   z-index: 1;
@@ -291,6 +286,22 @@ body {
     transform: scale(1.5);
     opacity: 0;
   }
+}
+
+.color__hex {
+  padding: 5rem 0 2rem 2rem;
+  border: 1px solid hsl(var(--color-primary-light)/0.2);
+}
+
+.dots {
+  --gap: 1rem;
+}
+.dots__dot {
+  width: 1.5rem;
+  height: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  background-color: hsl(var(--color-primary-white)/0.2);
 }
 
 .tab-link, .tab-link:link, .tab-link:visited {
