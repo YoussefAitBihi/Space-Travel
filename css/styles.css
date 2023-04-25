@@ -223,6 +223,10 @@ body {
   text-transform: uppercase;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 .letter-spacing-big {
   letter-spacing: var(--letter-spacing-big);
 }
@@ -235,9 +239,26 @@ body {
   letter-spacing: var(--letter-spacing-small);
 }
 
+/* ------------------------ */
+/*      Link Underlined     */
+/* ------------------------ */
+.underline {
+  border-bottom: 3px solid currentColor;
+}
+.underline ~ *:not(.underline):hover {
+  border-bottom: 3px solid hsl(var(--color-primary-white)/0.5);
+}
+
+/* ------------------------ */
+/*      Underline link      */
+/* ------------------------ */
 .header {
   justify-content: space-between;
   align-items: center;
+  margin-top: 6rem;
+}
+.header__logo-box {
+  margin-left: 2rem;
 }
 
 /* ------------------------ */
@@ -245,12 +266,24 @@ body {
 /* ------------------------ */
 .primary-navigation {
   background-color: hsl(var(--color-primary-white)/0.04);
+  padding: 0 5rem;
+  flex-basis: 100%;
+  position: relative;
 }
 .primary-navigation__list {
   list-style: none;
   display: flex;
   justify-content: center;
-  --gap: 8rem;
+  --gap: 6rem;
+}
+.primary-navigation__link:link, .primary-navigation__link:visited {
+  display: block;
+  color: hsl(var(--color-primary-white));
+  padding-block: 3rem;
+}
+.primary-navigation__link--bold {
+  font-weight: 700;
+  margin-right: 1rem;
 }
 
 .btn {

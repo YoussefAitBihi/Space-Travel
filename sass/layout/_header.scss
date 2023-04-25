@@ -1,4 +1,10 @@
 .header {
   justify-content: space-between;
   align-items: center;
+
+  margin-top: 6rem;
+
+  &__logo-box {
+    margin-left: 2rem;
+  }
 }
