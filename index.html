@@ -4,275 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <!-- FAVICON -->
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./img/favicon-32x32.png"
+      href="./assets/favicon-32x32.png"
     />
 
     <!-- GOOGLE FONT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
       rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
     />
 
     <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="./css/styles.css" />
 
-    <title>Space travel &dash; Learn how to create a design system</title>
+    <title>Space travel - Home page</title>
   </head>
   <body>
-    <header class="header container d-flex">
+    <header class="header d-flex">
       <div class="header__logo-box">
         <img
-          src="./img/favicon-32x32.png"
-          alt="The website logo"
+          src="./assets/shared/logo.svg"
+          alt="Website logo"
           class="header__logo"
         />
       </div>
-      <h1 class="header__heading">Design system</h1>
-    </header>
-
-    <main class="main-content container">
-      <!-- SECTION COLORS -->
-      <section class="section-colors">
-        <h2
-          class="heading-2 font-family-secondary font-size-700 font-weight-regular text-uppercase"
-          style="margin-bottom: 5rem"
-        >
-          <span>01</span>colors
-        </h2>
-
-        <div class="section-colors__colors d-grid gap">
-          <div
-            class="color text-uppercase font-family-secondary font-weight-regular"
-          >
-            <div
-              class="color__hex bg-dark text-light"
-              style="margin-bottom: 3rem"
-            >
-              #0b0d17
-            </div>
-            <p class="color__rgb">
-              <span class="text-light" style="margin-right: 2rem">rgb</span>11,
-              13, 23
-            </p>
-            <p class="color__hsl">
-              <span class="text-light" style="margin-right: 2rem">hsl</span
-              >230&deg;, 35%, 7%
-            </p>
-          </div>
-          <div
-            class="color text-uppercase font-family-secondary font-weight-regular"
-          >
-            <div
-              class="color__hex bg-light text-dark"
-              style="margin-bottom: 3rem"
-            >
-              #d0d6f9
-            </div>
-            <p class="color__rgb">
-              <span class="text-light" style="margin-right: 2rem">rgb</span>208,
-              214, 249
-            </p>
-            <p class="color__hsl">
-              <span class="text-light" style="margin-right: 2rem">hsl</span
-              >231&deg;, 77%, 90%
-            </p>
-          </div>
-          <div
-            class="color text-uppercase font-family-secondary font-weight-regular"
-          >
-            <div
-              class="color__hex bg-white text-dark"
-              style="margin-bottom: 3rem"
-            >
-              #ffffff
-            </div>
-            <p class="color__rgb">
-              <span class="text-light" style="margin-right: 2rem">rgb</span>255,
-              255, 255
-            </p>
-            <p class="color__hsl">
-              <span class="text-light" style="margin-right: 2rem">hsl</span
-              >0&deg;, 0%, 100%
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION TYPOGRAPHY -->
-      <section class="section-typography">
-        <h2
-          class="heading-2 font-family-secondary font-size-800 font-weight-regular text-uppercase"
-          style="margin-bottom: 5rem"
-        >
-          <span>02</span>typography
-        </h2>
-        <div class="d-flex">
-          <div class="section-typography__headings" style="margin-right: 5rem">
-            <div style="margin-bottom: 4rem">
-              <p class="text-light">Heading 1 - Bellefair regular - 150px</p>
-              <p class="font-family-secondary font-size-900 text-uppercase">
-                earth
-              </p>
-            </div>
-            <div style="margin-bottom: 4rem">
-              <p class="text-light">Heading 2 - Bellefair regular - 100px</p>
-              <p class="font-family-secondary font-size-800 text-uppercase">
-                venus
-              </p>
-            </div>
-            <div style="margin-bottom: 4rem">
-              <p class="text-light">Heading 3 - Bellefair regular - 56px</p>
-              <p class="font-family-secondary font-size-700 text-uppercase">
-                jupiter & saturn
-              </p>
-            </div>
-            <div style="margin-bottom: 4rem">
-              <p class="text-light">Heading 4 - Bellefair regular - 32px</p>
-              <p class="font-family-secondary font-size-600 text-uppercase">
-                uranus, neptune, & pluto
-              </p>
-            </div>
-            <div>
-              <p class="text-light">
-                Heading 5 - Barlow Condensed Regular - 28px - 4.74px Character
-                space
-              </p>
-              <p class="font-size-500 letter-spacing-big text-uppercase">
-                So you want to travel to space
-              </p>
-            </div>
-          </div>
-          <div class="section-typography__subheadings">
-            <div style="margin-bottom: 4rem">
-              <p class="text-light">Subheading 1 - Bellefair Regular - 28px</p>
-              <p class="font-family-secondary font-size-500 text-uppercase">
-                384,000 km
-              </p>
-            </div>
-            <div style="margin-bottom: 4rem">
-              <p class="text-light">
-                Subheading 2 - Barlow Condensed Regular - 14px - 2.35 Character
-                space
-              </p>
-              <p
-                class="font-family-secondary-conds font-size-200 text-uppercase letter-spacing-small"
-              >
-                avg. Distance
-              </p>
-            </div>
-            <div style="margin-bottom: 4rem">
-              <p class="text-light">
-                Nav text - Barlow Condensed Regular - 16px - 2.7px Character
-                space
-              </p>
-              <p
-                class="font-family-secondary-conds font-size-300 text-uppercase letter-spacing-medium"
-              >
-                europa
-              </p>
-            </div>
-            <div>
-              <p class="text-light">Body text</p>
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Expedita, atque reiciendis neque asperiores laborum minima
-                nesciunt provident rem suscipit recusandae a similique vero?
-                Laudantium voluptas quo dolores nulla iure sint. Mollitia dolor
-                dolores temporibus ratione debitis doloremque atque molestias
-                officiis pariatur vel incidunt provident cumque facere delectus,
-                ex aperiam in, nesciunt velit. Nihil quisquam ratione eos
-                corporis atque inventore consectetur!
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- SECTION INTERACTIVE ELEMENTS -->
-      <section class="section-interactive-element">
-        <h2
-          class="heading-2 font-family-secondary font-size-800 font-weight-regular text-uppercase"
-        >
-          <span>03</span>interactive elements
-        </h2>
-        <nav class="primary-navigation" data-tab="tab-links-parent">
-          <ul class="primary-navigation__list gap">
-            <li class="primary-navigation__item">
-              <a
-                href="#!"
-                class="tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
-              >
-                <span>00</span>
-                <span
-                  class="tab-link__underline tab-link__underline--scaled"
-                ></span>
-                active
-              </a>
-            </li>
-            <li class="primary-navigation__item">
-              <a
-                href="#!"
-                class="tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
-                ><span>01</span>
-                <span class="tab-link__underline"></span>
-                hover
-              </a>
-            </li>
-            <li class="primary-navigation__item">
-              <a
-                href="#!"
-                class="tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
-                ><span>02</span>
-                <span class="tab-link__underline"></span>
-                idle
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <p class="text-light text-center">Different States of Navigation Bar</p>
-        <div class="d-flex gap bg-dark">
-          <div class="btns">
+      <nav class="primary-navigation">
+        <ul class="primary-navigation__list gap" data-tab="tab-links-parent">
+          <li class="primary-navigation__item">
             <a
-              href="#!"
-              class="btn font-family-secondary font-size-600 text-dark bg-white text-uppercase"
-              >explore</a
+              href="/"
+              class="primary-navigation__link tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
             >
-          </div>
-          <div
-            class="secondary-navigation d-flex gap"
-            style="flex-basis: 100%; align-items: flex-start"
-            data-tab="tab-links-parent"
-          >
-            <button
-              class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
-            >
-              moon
+              <span class="primary-navigation__link--bold">00</span>
               <span
                 class="tab-link__underline tab-link__underline--scaled"
-              ></span></button
-            ><button
-              class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
-            >
-              mars
-              <span class="tab-link__underline"></span></button
-            ><button
-              class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
-            >
-              europa
+              ></span>
+              home
+            </a>
+          </li>
+          <li class="primary-navigation__item">
+            <a
+              href="./destination.html"
+              class="primary-navigation__link tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
+              ><span class="primary-navigation__link--bold">01</span>
               <span class="tab-link__underline"></span>
-            </button>
-          </div>
-        </div>
-      </section>
-    </main>
+              destination
+            </a>
+          </li>
+          <li class="primary-navigation__item">
+            <a
+              href="./crew.html"
+              class="primary-navigation__link tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
+            >
+              <span class="primary-navigation__link--bold">02</span>
+              <span class="tab-link__underline"></span>
+              crew
+            </a>
+          </li>
+          <li class="primary-navigation__item">
+            <a
+              href="./technology.html"
+              class="primary-navigation__link tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
+              ><span class="primary-navigation__link--bold">03</span>
+              <span class="tab-link__underline"></span>
+              technology
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
     <script src="./js/script.js"></script>
   </body>
 </html>
