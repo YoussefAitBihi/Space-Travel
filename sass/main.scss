@@ -1,14 +1,16 @@
 @import './abstracts/variables';
+@import './abstracts/mixins';
 
 @import './base/base';
 @import './base/typography';
 @import './base/utility';
 
+@import './layout/grid';
 @import './layout/header';
 @import './layout/navigation';
 @import './layout/footer';
 
-@import './components/btn';
+@import './components/primary-button';
 @import './components/components';
 @import './components/dot-indicator';
 @import './components/tab-link';

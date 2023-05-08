@@ -2,10 +2,29 @@ body {
   font-family: var(--font-family-primary-normal);
   font-size: var(--font-size-400);
   font-weight: 400; // regular (normal)
-  background-color: hsl(var(--color-primary-dark));
+
+  background-image: url(../assets/home/background-home-desktop.jpg);
   color: hsl(var(--color-primary-white));
+
   line-height: 1.5; // 1.4 default value
   min-height: 100vh; // Because we're not going to scrolling in this project
+
+  display: grid;
+  grid-template-rows: min-content 1fr;
+
+  padding-block: 4rem 5.2rem;
+
+  overflow: hidden;
+
+  @include respond($bp-tablet) {
+    padding-block: 0;
+  }
+}
+
+.grid-container {
+  @include respond($bp-tablet) {
+    text-align: center;
+  }
 }
 
 // heading-2
