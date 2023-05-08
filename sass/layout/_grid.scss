@@ -1,0 +1,30 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 2em min-content 1fr 2em;
+  place-items: flex-end;
+
+  @include respond($bp-tablet) {
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 2em 1fr 2em;
+    justify-items: center;
+
+    padding-block: 5rem;
+  }
+}
+
+.grid-container > :first-child {
+  grid-column: 2 / 3;
+
+  @include respond($bp-tablet) {
+    align-self: flex-start;
+  }
+}
+
+.grid-container > :last-child {
+  grid-column: 3 / 4;
+
+  @include respond($bp-tablet) {
+    grid-row: 2 / -1;
+    grid-column: 2 / span 1;
+  }
+}

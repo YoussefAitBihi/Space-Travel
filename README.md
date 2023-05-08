@@ -17,3 +17,7 @@ In this section, we create a so-called global reset, the purpose of this one is 
 # 4. Create variables and utility classes
 
 In this section, we are going to create all variables and utility classes that are we need on our project such as container, spacing, ...
+
+# 5. Create the design system
+
+In this section, we are going to create the design system.

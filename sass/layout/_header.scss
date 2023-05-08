@@ -1,10 +1,6 @@
-.header {
-  justify-content: space-between;
+.primary-header {
   align-items: center;
+  justify-content: space-between;
 
-  margin-top: 6rem;
-
-  &__logo-box {
-    margin-left: 2rem;
-  }
+  padding-left: 5rem;
 }

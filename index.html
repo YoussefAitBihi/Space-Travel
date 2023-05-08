@@ -26,59 +26,90 @@
     <title>Space travel - Home page</title>
   </head>
   <body>
-    <header class="header d-flex">
-      <div class="header__logo-box">
+    <!-- HEADER -->
+    <header class="primary-header d-flex">
+      <!-- LOGO -->
+      <div class="primary-header__logo-box">
         <img
           src="./assets/shared/logo.svg"
-          alt="Website logo"
-          class="header__logo"
+          alt="Space travel logo"
+          class="primary-header__logo"
         />
       </div>
+
+      <!-- PRIMARY NAVIGATION -->
       <nav class="primary-navigation">
-        <ul class="primary-navigation__list gap" data-tab="tab-links-parent">
-          <li class="primary-navigation__item">
+        <ul class="primary-navigation__list d-flex gap" data-tab="parent">
+          <li class="primary-navigation__item underline">
             <a
-              href="/"
-              class="primary-navigation__link tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
+              href="#!"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              data-tab="child"
             >
-              <span class="primary-navigation__link--bold">00</span>
-              <span
-                class="tab-link__underline tab-link__underline--scaled"
-              ></span>
-              home
-            </a>
-          </li>
-          <li class="primary-navigation__item">
-            <a
-              href="./destination.html"
-              class="primary-navigation__link tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
-              ><span class="primary-navigation__link--bold">01</span>
-              <span class="tab-link__underline"></span>
-              destination
-            </a>
-          </li>
-          <li class="primary-navigation__item">
-            <a
-              href="./crew.html"
-              class="primary-navigation__link tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
+              <span class="primary-navigation__link--bold" data-tab="child"
+                >00</span
+              >home</a
             >
-              <span class="primary-navigation__link--bold">02</span>
-              <span class="tab-link__underline"></span>
-              crew
-            </a>
           </li>
           <li class="primary-navigation__item">
             <a
-              href="./technology.html"
-              class="primary-navigation__link tab-link font-family-primary-conds letter-spacing-medium font-size-300 text-uppercase text-white"
-              ><span class="primary-navigation__link--bold">03</span>
-              <span class="tab-link__underline"></span>
-              technology
-            </a>
+              href="#!"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              data-tab="child"
+              ><span class="primary-navigation__link--bold" data-tab="child"
+                >01</span
+              >destination</a
+            >
+          </li>
+          <li class="primary-navigation__item">
+            <a
+              href="#!"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              data-tab="child"
+              ><span class="primary-navigation__link--bold" data-tab="child"
+                >02</span
+              >crew</a
+            >
+          </li>
+          <li class="primary-navigation__item">
+            <a
+              href="#!"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              data-tab="child"
+              ><span class="primary-navigation__link--bold" data-tab="child"
+                >03</span
+              >technology</a
+            >
           </li>
         </ul>
       </nav>
     </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content grid-container">
+      <div class="main-content__left">
+        <h1 class="text-uppercase">
+          <span
+            class="font-family-primary-conds font-size-500 letter-spacing-big text-light"
+            >So, you want to travel to</span
+          ><br /><span class="font-family-secondary font-size-900">space</span>
+        </h1>
+        <p class="text-light">
+          Let’s face it; if you want to go to space, you might as well genuinely
+          go to outer space and not hover kind of on the edge of it. Well sit
+          back, and relax because we’ll give you a truly out of this world
+          experience!
+        </p>
+      </div>
+      <div class="main-content__right">
+        <a
+          href="#!"
+          class="primary-button font-family-secondary font-size-600 text-dark text-uppercase letter-spacing-small"
+          >Explore</a
+        >
+      </div>
+    </main>
+
     <script src="./js/script.js"></script>
   </body>
 </html>

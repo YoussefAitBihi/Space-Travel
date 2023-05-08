@@ -2,6 +2,11 @@
   // Grid
   --gap: 3rem;
 
+  // BREAKPOINTS
+  --bp-desktop: 90em; // 1440px
+  --bp-tablet: 48em; // 768px
+  --bp-phone: 23.4375em; // 375px
+
   // COLORS
   --color-primary-dark: 230 35% 7%;
   --color-primary-light: 231 77% 90%;
@@ -33,3 +38,8 @@
   // SPACING
   --flow-margin: 3rem;
 }
+
+// BREAKPOINTS
+$bp-desktop: 90em; // 1440px
+$bp-tablet: 48em; // 768px
+$bp-phone: 23.4375em; // 375px

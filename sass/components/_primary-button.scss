@@ -1,16 +1,18 @@
-.btn {
+.primary-button {
   position: relative;
   z-index: 1;
 
   &:link,
   &:visited {
-    display: grid;
+    display: inline-grid;
     place-items: center;
-
+    background-color: hsl(var(--color-primary-white));
     text-decoration: none;
     padding-inline: 2em; // 1em = font-size value
     aspect-ratio: 1;
     border-radius: 50%;
+
+    border: none;
   }
 
   &::after {
