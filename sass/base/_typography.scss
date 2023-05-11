@@ -2,8 +2,8 @@ body {
   font-family: var(--font-family-primary-normal);
   font-size: var(--font-size-400);
   font-weight: 400; // regular (normal)
-
-  background-image: url(../assets/home/background-home-desktop.jpg);
+  background: url(../assets/home/background-home-desktop.jpg) center
+    center/cover no-repeat;
   color: hsl(var(--color-primary-white));
 
   line-height: 1.5; // 1.4 default value
@@ -17,7 +17,12 @@ body {
   overflow: hidden;
 
   @include respond($bp-tablet) {
+    --font-size-400: 1.6rem;
     padding-block: 0;
+  }
+
+  @include respond($bp-phone) {
+    --font-size-400: 1.5rem;
   }
 }
 

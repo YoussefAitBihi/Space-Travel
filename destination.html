@@ -25,5 +25,149 @@
 
     <title>Space travel - Where is your next destination?</title>
   </head>
-  <body></body>
+  <body>
+    <!-- HEADER -->
+    <header class="primary-header d-flex">
+      <!-- LOGO -->
+      <div class="primary-header__logo-box">
+        <img
+          src="./assets/shared/logo.svg"
+          alt="Space travel logo"
+          class="primary-header__logo"
+        />
+      </div>
+
+      <!-- PRIMARY NAVIGATION -->
+      <nav class="primary-navigation">
+        <ul class="primary-navigation__list d-flex gap" data-tab="parent">
+          <li class="primary-navigation__item underline">
+            <a
+              href="/"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              data-tab="child"
+            >
+              <span class="primary-navigation__link--bold" data-tab="child"
+                >00</span
+              >home</a
+            >
+          </li>
+          <li class="primary-navigation__item">
+            <a
+              href="destination.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              data-tab="child"
+              ><span class="primary-navigation__link--bold" data-tab="child"
+                >01</span
+              >destination</a
+            >
+          </li>
+          <li class="primary-navigation__item">
+            <a
+              href="crew.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              data-tab="child"
+              ><span class="primary-navigation__link--bold" data-tab="child"
+                >02</span
+              >crew</a
+            >
+          </li>
+          <li class="primary-navigation__item">
+            <a
+              href="technology.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              data-tab="child"
+              ><span class="primary-navigation__link--bold" data-tab="child"
+                >03</span
+              >technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content grid-container">
+      <div class="main-content__left">
+        <h2
+          class="heading-2 font-family-primary-conds font-size-500 font-weight-regular text-uppercase letter-spacing-big"
+        >
+          <span>01</span>pick your destination
+        </h2>
+        <div class="main-content__picture-box">
+          <img
+            src="./assets/destination/image-moon.png"
+            alt="Moon picture"
+            class="main-content__picture"
+          />
+        </div>
+      </div>
+      <div class="main-content__right">
+        <nav class="secondary-navigation d-flex gap">
+          <button
+            aria-selected="true"
+            class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+          >
+            moon
+            <span class="tab-link__underline tab-link__underline--scaled">
+            </span></button
+          ><button
+            aria-selected="false"
+            class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+          >
+            mars
+            <span class="tab-link__underline"></span></button
+          ><button
+            aria-selected="false"
+            class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+          >
+            europa
+            <span class="tab-link__underline"></span>
+          </button>
+          <button
+            aria-selected="false"
+            class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+          >
+            titan
+            <span class="tab-link__underline"></span>
+          </button>
+        </nav>
+        <h1
+          class="font-family-secondary font-size-800 text-white text-uppercase"
+        >
+          moon
+        </h1>
+        <p class="text-light">
+          See our planet as you’ve never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you’re
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <hr class="separator" />
+        <div class="d-flex gap" style="--gap: 5rem">
+          <div class="main-content__distance text-uppercase">
+            <span
+              class="main-content__distance-title font-family-primary-conds font-size-200 letter-spacing-small text-light"
+              >avg. distance</span
+            ><br />
+            <span
+              class="main-content__distance-value font-family-secondary font-size-500 text-white"
+              >384,000 km</span
+            >
+          </div>
+          <div class="main-content__time text-uppercase">
+            <span
+              class="main-content__time-title font-family-primary-conds font-size-200 letter-spacing-small text-light"
+              >est. travel time</span
+            ><br />
+            <span
+              class="main-content__time-value font-family-secondary font-size-500 text-white"
+              >3 days</span
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="./js/script.js"></script>
+  </body>
 </html>
