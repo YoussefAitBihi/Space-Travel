@@ -219,3 +219,12 @@
 //     transform: scaleX(1);
 //   }
 // }
+
+/* ------------------------ */
+/*         Separator        */
+/* ------------------------ */
+.separator {
+  margin-block: 5rem 2rem;
+  border: none;
+  border-bottom: 1px solid hsl(var(--color-separator));
+}

@@ -6,6 +6,7 @@
   --color-primary-dark: 230 35% 7%;
   --color-primary-light: 231 77% 90%;
   --color-primary-white: 0 0% 100%;
+  --color-separator: 231, 15%, 26%;
   --font-family-primary-normal: "Barlow", sans-serif;
   --font-family-primary-conds: "Barlow Condensed", sans-serif;
   --font-family-secondary: "Bellefair", serif;
@@ -88,7 +89,7 @@ body {
   font-family: var(--font-family-primary-normal);
   font-size: var(--font-size-400);
   font-weight: 400;
-  background-image: url(../assets/home/background-home-desktop.jpg);
+  background: url(../assets/home/background-home-desktop.jpg) center center/cover no-repeat;
   color: hsl(var(--color-primary-white));
   line-height: 1.5;
   min-height: 100vh;
@@ -99,7 +100,13 @@ body {
 }
 @media only screen and (max-width: 48em) {
   body {
+    --font-size-400: 1.6rem;
     padding-block: 0;
+  }
+}
+@media only screen and (max-width: 23.4375em) {
+  body {
+    --font-size-400: 1.5rem;
   }
 }
 
@@ -279,10 +286,20 @@ body {
 /* ------------------------ */
 /*      Underline link      */
 /* ------------------------ */
+/* ------------------------ */
+/*         Separator        */
+/* ------------------------ */
+.separator {
+  margin-block: 5rem 2rem;
+  border: none;
+  border-bottom: 1px solid hsl(var(--color-separator));
+}
+
 .grid-container {
+  max-width: 120rem;
+  margin-inline: auto;
   display: grid;
-  grid-template-columns: 2em min-content 1fr 2em;
-  place-items: flex-end;
+  grid-template-columns: 2em repeat(2, minmax(0, 60rem)) 2em;
 }
 @media only screen and (max-width: 48em) {
   .grid-container {
