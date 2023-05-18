@@ -12,9 +12,7 @@ body {
   display: grid;
   grid-template-rows: min-content 1fr;
 
-  padding-block: 4rem 5.2rem;
-
-  overflow: hidden;
+  overflow-x: hidden;
 
   @include respond($bp-tablet) {
     --font-size-400: 1.6rem;

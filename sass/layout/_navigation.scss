@@ -2,30 +2,130 @@
 /*    PRIMARY NAVIGATION    */
 /* ------------------------ */
 .primary-navigation {
-  flex-basis: 100%;
-  max-width: 80rem; // When we will implement the design system
+  display: flex;
+  justify-content: center;
+
+  max-width: 80rem;
+  width: 100%;
 
   background-color: hsl(var(--color-primary-white) / 0.04);
-  padding-left: 10rem;
 
   position: relative;
 
-  &::after {
-    content: '';
-    display: block;
+  @include respond($bp-tablet) {
+    max-width: 45rem;
+  }
 
-    width: 40rem;
-    height: 1px;
-    background-color: hsl(var(--color-primary-white) / 0.2);
+  @include respond($bp-phone) {
+    padding-inline: 0;
 
-    position: absolute;
-    left: -38rem;
-    top: 50%;
+    height: 100vh;
+    max-width: 66%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+
+    overflow: hidden;
+  }
+
+  &__hamburger-icon {
+    width: 4rem;
+    height: 0.3rem;
+    background-color: hsl(var(--color-primary-white));
+
+    position: relative;
+    z-index: 10;
+
+    display: none;
+
+    @include respond($bp-phone) {
+      display: block;
+
+      position: absolute;
+      right: 2rem;
+      top: 3rem;
+    }
+
+    &,
+    &::before,
+    &::after {
+      border-radius: 0.3rem;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      background-color: inherit;
+
+      position: absolute;
+
+      transition: transform 0.2s;
+    }
+
+    &::before {
+      top: -1.1rem;
+    }
+
+    &::after {
+      bottom: -1.1rem;
+    }
+  }
+
+  &__hamburger-icon-checkbox {
+    display: none;
+  }
+
+  &__hamburger-icon-checkbox:checked ~ label &__hamburger-icon {
+    visibility: hidden;
+  }
+
+  &__hamburger-icon-checkbox:checked ~ label &__hamburger-icon::before,
+  &__hamburger-icon-checkbox:checked ~ label &__hamburger-icon::after {
+    visibility: visible;
+  }
+
+  &__hamburger-icon-checkbox:checked ~ label &__hamburger-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  &__hamburger-icon-checkbox:checked ~ label &__hamburger-icon::after {
+    bottom: 0;
+    transform: rotate(-45deg);
   }
 
   &__list {
     list-style: none;
+
     --gap: 6rem;
+
+    transition: transform 0.2s;
+
+    @include respond($bp-tablet) {
+      --gap: 2rem;
+    }
+
+    @include respond($bp-phone) {
+      --gap: 0;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+
+      background-color: rgba(255, 255, 255, 0.2);
+      padding-top: 10rem;
+
+      &[aria-expanded='true'] {
+        transform: translateX(0%);
+      }
+
+      &[aria-expanded='false'] {
+        transform: translateX(100%);
+      }
+    }
   }
 
   &__link {
@@ -34,15 +134,44 @@
       display: block;
 
       color: hsl(var(--color-primary-white));
-      padding-block: 2.5rem;
+      padding-block: 3rem;
+
+      @include respond($bp-tablet) {
+        padding-block: 2rem;
+
+        --font-size-400: 1.4rem;
+      }
+
+      @include respond($bp-phone) {
+        margin-left: 3rem;
+        padding-block: 0.4rem;
+        margin-bottom: 2rem;
+      }
     }
 
     &--bold {
       font-weight: 700;
       margin-right: 1rem;
+
+      @include respond($bp-tablet) {
+        display: none;
+      }
+
+      @include respond($bp-phone) {
+        display: inline-block;
+      }
     }
   }
 }
 
 // aria: accessible rich internet application, it gives extra context to assistive technologies
 // For our context, let assistive technology know which tabs we're gonna open
+
+// JS             => 08:30 -- 11:30
+// Design System  => 12:00 -- 14:00
+// How JS Works   => 14:00 -- 14:45
+
+//      -------------------
+
+// Restful API   => 16:00 -- 19:00
+// RWD           => 19:15 -- 20:00

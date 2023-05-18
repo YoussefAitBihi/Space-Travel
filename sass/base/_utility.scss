@@ -172,6 +172,11 @@
   & ~ *:not(.underline):hover {
     border-bottom: 3px solid hsl(var(--color-primary-white) / 0.5);
   }
+
+  @include respond($bp-phone) {
+    border-right: 3px solid currentColor;
+    border-bottom: 0;
+  }
 }
 
 /* ------------------------ */
