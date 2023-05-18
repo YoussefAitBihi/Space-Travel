@@ -8,6 +8,7 @@ body {
 
   line-height: 1.5; // 1.4 default value
   min-height: 100vh; // Because we're not going to scrolling in this project
+  padding-block: 4rem;
 
   display: grid;
   grid-template-rows: min-content 1fr;

@@ -19,10 +19,14 @@
   @include respond($bp-phone) {
     padding-inline: 0;
 
-    height: 100vh;
+    height: 100%;
     max-width: 66%;
     background-color: transparent;
-    backdrop-filter: blur(10px);
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
 
     overflow: hidden;
   }
@@ -99,6 +103,8 @@
 
   &__list {
     list-style: none;
+
+    backdrop-filter: blur(16px);
 
     --gap: 6rem;
 
