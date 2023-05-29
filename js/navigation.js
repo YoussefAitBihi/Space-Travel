@@ -5,7 +5,7 @@ const hamburgerIcon = document.querySelector(
 );
 const navigation = document.querySelector('.primary-navigation__list');
 
-hamburgerIcon.addEventListener('click', function () {
+const openCloseNavHandler = function () {
   if (navigation.getAttribute('aria-expanded') === 'true') {
     navigation.setAttribute('aria-expanded', 'false');
     this.setAttribute('aria-label', 'Opened Icon');
@@ -13,4 +13,6 @@ hamburgerIcon.addEventListener('click', function () {
     navigation.setAttribute('aria-expanded', 'true');
     this.setAttribute('aria-label', 'Closed Icon');
   }
-});
+};
+
+hamburgerIcon.addEventListener('click', openCloseNavHandler);

@@ -1,35 +1,43 @@
 .grid-container {
-  max-width: 120rem;
-  margin-inline: auto;
-
   display: grid;
-  grid-template-columns: 2em repeat(2, minmax(0, 60rem)) 2em;
-  align-items: flex-end;
+  grid-template-columns:
+    minmax(2rem, 1fr)
+    repeat(2, minmax(0, 60rem))
+    minmax(2rem, 1fr);
 
   @include respond($bp-tablet) {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: 2em 1fr 2em;
-    justify-items: center;
-
-    padding-block: 5rem;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: repeat(2, min-content);
+    gap: 0;
   }
-}
 
-.grid-container > :first-child {
-  grid-column: 2 / 3;
-
-  @include respond($bp-tablet) {
-    align-self: flex-start;
+  & > :first-child {
+    grid-column: 2 / 3;
   }
-}
 
-.grid-container > :last-of-type {
-  grid-column: 3 / 4;
-  justify-self: end;
+  & > :last-of-type {
+    grid-column: 3 / 4;
 
-  @include respond($bp-tablet) {
-    grid-row: 2 / -1;
-    grid-column: 2 / span 1;
-    justify-self: center !important;
+    @include respond($bp-tablet) {
+      grid-row: 2;
+      grid-column: 2;
+    }
+  }
+
+  &--home {
+    place-items: end;
+
+    @include respond($bp-tablet) {
+      place-items: center;
+      gap: 9rem 0;
+    }
+
+    @include respond($bp-phone) {
+      gap: 6rem 0;
+    }
+  }
+
+  &--destination {
+    align-items: end;
   }
 }

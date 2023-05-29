@@ -1,4 +1,5 @@
 :root {
+  --grid-width: 120rem;
   --gap: 3rem;
   --bp-desktop: 90em;
   --bp-tablet: 48em;
@@ -56,6 +57,14 @@ h4,
 h5,
 h6 {
   font-weight: 400;
+  line-height: 1.1;
+}
+
+.font-size-900,
+.font-size-800,
+.font-size-700,
+.font-size-600 {
+  line-height: 1.1;
 }
 
 img,
@@ -93,7 +102,7 @@ body {
   color: hsl(var(--color-primary-white));
   line-height: 1.5;
   min-height: 100vh;
-  padding-block: 4rem;
+  padding: 3rem 0 5rem;
   display: grid;
   grid-template-rows: min-content 1fr;
   overflow-x: hidden;
@@ -101,7 +110,7 @@ body {
 @media only screen and (max-width: 48em) {
   body {
     --font-size-400: 1.6rem;
-    padding-block: 0;
+    padding: 0;
   }
 }
 @media only screen and (max-width: 23.4375em) {
@@ -111,14 +120,12 @@ body {
 }
 
 @media only screen and (max-width: 48em) {
-  .grid-container {
+  .main-content {
     text-align: center;
   }
 }
-
-.heading-2 > span {
-  color: hsl(var(--color-primary-white)/0.2);
-  margin-right: 2rem;
+.main-content__header--destination {
+  text-align: left;
 }
 
 .flow > * + * {
@@ -136,6 +143,10 @@ body {
 
 .d-flex {
   display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
 }
 
 .d-grid {
@@ -207,11 +218,11 @@ body {
 }
 
 .font-size-900 {
-  font-size: var(--font-size-900);
+  font-size: clamp(8rem, 15vw, var(--font-size-900));
 }
 
 .font-size-800 {
-  font-size: var(--font-size-800);
+  font-size: clamp(var(--font-size-700), 11vw - 0.4rem, var(--font-size-800));
 }
 
 .font-size-700 {
@@ -223,7 +234,7 @@ body {
 }
 
 .font-size-500 {
-  font-size: var(--font-size-500);
+  font-size: clamp(var(--font-size-300), 4vw - 1rem, var(--font-size-500));
 }
 
 .font-size-400 {
@@ -236,13 +247,6 @@ body {
 
 .font-size-200 {
   font-size: var(--font-size-200);
-}
-
-.font-size-900,
-.font-size-800,
-.font-size-700,
-.font-size-600 {
-  line-height: 1.1;
 }
 
 .font-weight-regular {
@@ -273,69 +277,82 @@ body {
   letter-spacing: var(--letter-spacing-small);
 }
 
+.list-unstyled {
+  list-style: none;
+}
+
 /* ------------------------ */
 /*      Link Underlined     */
 /* ------------------------ */
 .underline {
   border-bottom: 3px solid currentColor;
 }
-.underline ~ *:not(.underline):hover {
-  border-bottom: 3px solid hsl(var(--color-primary-white)/0.5);
+.underline, .underline ~ *:not(.underline) {
+  border: none;
 }
 @media only screen and (max-width: 23.4375em) {
-  .underline {
-    border-right: 3px solid currentColor;
+  .underline--to-left {
     border-bottom: 0;
+    border-right: 3px solid currentColor;
   }
 }
+.underline ~ *:not(.underline):hover, .underline ~ *:not(.underline):focus {
+  border-bottom: 3px solid hsl(var(--color-primary-white)/0.5);
+}
 
-/* ------------------------ */
-/*      Underline link      */
-/* ------------------------ */
 /* ------------------------ */
 /*         Separator        */
 /* ------------------------ */
 .separator {
   margin-block: 5rem 2rem;
-  border: none;
+  height: 1px;
   border-bottom: 1px solid hsl(var(--color-separator));
+}
+@media only screen and (max-width: 23.4375em) {
+  .separator {
+    margin-block: 2.5rem;
+  }
 }
 
 .grid-container {
-  max-width: 120rem;
-  margin-inline: auto;
   display: grid;
-  grid-template-columns: 2em repeat(2, minmax(0, 60rem)) 2em;
-  align-items: flex-end;
+  grid-template-columns: minmax(2rem, 1fr) repeat(2, minmax(0, 60rem)) minmax(2rem, 1fr);
 }
 @media only screen and (max-width: 48em) {
   .grid-container {
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: 2em 1fr 2em;
-    justify-items: center;
-    padding-block: 5rem;
+    grid-template-columns: 2rem 1fr 2rem;
+    grid-template-rows: repeat(2, min-content);
+    gap: 0;
   }
 }
-
 .grid-container > :first-child {
   grid-column: 2/3;
 }
-@media only screen and (max-width: 48em) {
-  .grid-container > :first-child {
-    align-self: flex-start;
-  }
-}
-
 .grid-container > :last-of-type {
   grid-column: 3/4;
-  justify-self: end;
 }
 @media only screen and (max-width: 48em) {
   .grid-container > :last-of-type {
-    grid-row: 2/-1;
-    grid-column: 2/span 1;
-    justify-self: center !important;
+    grid-row: 2;
+    grid-column: 2;
   }
+}
+.grid-container--home {
+  place-items: end;
+}
+@media only screen and (max-width: 48em) {
+  .grid-container--home {
+    place-items: center;
+    gap: 9rem 0;
+  }
+}
+@media only screen and (max-width: 23.4375em) {
+  .grid-container--home {
+    gap: 6rem 0;
+  }
+}
+.grid-container--destination {
+  align-items: end;
 }
 
 .primary-header {
@@ -428,7 +445,7 @@ body {
     display: block;
     position: absolute;
     right: 2rem;
-    top: 3rem;
+    top: 4rem;
   }
 }
 .primary-navigation__hamburger-icon, .primary-navigation__hamburger-icon::before, .primary-navigation__hamburger-icon::after {
@@ -468,7 +485,6 @@ body {
 }
 .primary-navigation__list {
   list-style: none;
-  backdrop-filter: blur(16px);
   --gap: 6rem;
   transition: transform 0.2s;
 }
@@ -483,8 +499,9 @@ body {
     display: block;
     width: 100%;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: hsl(var(--color-primary-white)/0.2);
     padding-top: 10rem;
+    backdrop-filter: blur(16px) brightness(0.4);
   }
   .primary-navigation__list[aria-expanded=true] {
     transform: translateX(0%);
@@ -526,6 +543,15 @@ body {
   }
 }
 
+.secondary-navigation {
+  display: inline-flex;
+}
+.secondary-navigation > button {
+  background-color: transparent;
+  padding-block: 2rem;
+  cursor: pointer;
+}
+
 .primary-button {
   position: relative;
   z-index: 1;
@@ -533,6 +559,7 @@ body {
 .primary-button:link, .primary-button:visited {
   display: inline-grid;
   place-items: center;
+  font-size: clamp(2rem, 5vw, var(--font-size-600));
   background-color: hsl(var(--color-primary-white));
   text-decoration: none;
   padding-inline: 2em;
@@ -606,6 +633,37 @@ body {
 }
 .tab-link:hover .tab-link__underline:not(.tab-link__underline--scaled), .tab-link:focus .tab-link__underline:not(.tab-link__underline--scaled) {
   transform: scaleX(1);
+}
+
+.main-content__picture-box {
+  max-width: 35rem;
+  margin: 4rem auto 0;
+}
+@media only screen and (max-width: 23.4375em) {
+  .main-content__infos {
+    display: block;
+  }
+  .main-content__infos > *:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media only screen and (max-width: 48em) {
+  .main-content--home {
+    padding-block: 7rem;
+  }
+}
+@media only screen and (max-width: 23.4375em) {
+  .main-content--home {
+    padding-block: 3rem;
+  }
+}
+.main-content__header--home > h1 > span {
+  display: block;
+  margin-bottom: 1rem;
+}
+.main-content__header--home > h1 > span:last-of-type {
+  margin-bottom: 0;
 }
 
 /*# sourceMappingURL=styles.css.map */

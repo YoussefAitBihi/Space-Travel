@@ -7,20 +7,12 @@
   padding-inline: 1.6rem;
 }
 
-// // Three columns
-// .grid-container {
-//   max-width: 114rem;
-
-//   display: grid;
-//   grid-template-columns: repeat(3, 1fr);
-// }
-
-// Max width: 1140px
-// Inline padding: 165px
-// Inline margin: auto
-
 .d-flex {
   display: flex;
+}
+
+.d-inline-flex {
+  display: inline-flex;
 }
 
 .d-grid {
@@ -96,11 +88,11 @@
 
 // FONT-SIZES
 .font-size-900 {
-  font-size: var(--font-size-900);
+  font-size: clamp(8rem, 15vw, var(--font-size-900));
 }
 
 .font-size-800 {
-  font-size: var(--font-size-800);
+  font-size: clamp(var(--font-size-700), 11vw - 0.4rem, var(--font-size-800));
 }
 
 .font-size-700 {
@@ -112,7 +104,7 @@
 }
 
 .font-size-500 {
-  font-size: var(--font-size-500);
+  font-size: clamp(var(--font-size-300), 4vw - 1rem, var(--font-size-500));
 }
 
 .font-size-400 {
@@ -125,13 +117,6 @@
 
 .font-size-200 {
   font-size: var(--font-size-200);
-}
-
-.font-size-900,
-.font-size-800,
-.font-size-700,
-.font-size-600 {
-  line-height: 1.1;
 }
 
 // FONT-WEIGHTS
@@ -163,73 +148,43 @@
   letter-spacing: var(--letter-spacing-small);
 }
 
+.list-unstyled {
+  list-style: none;
+}
+
 /* ------------------------ */
 /*      Link Underlined     */
 /* ------------------------ */
 .underline {
+  &,
+  & ~ *:not(.underline) {
+    border: none;
+  }
+
   border-bottom: 3px solid currentColor;
 
-  & ~ *:not(.underline):hover {
+  @include respond($bp-phone) {
+    &--to-left {
+      border-bottom: 0;
+      border-right: 3px solid currentColor;
+    }
+  }
+
+  & ~ *:not(.underline):hover,
+  & ~ *:not(.underline):focus {
     border-bottom: 3px solid hsl(var(--color-primary-white) / 0.5);
   }
-
-  @include respond($bp-phone) {
-    border-right: 3px solid currentColor;
-    border-bottom: 0;
-  }
 }
-
-/* ------------------------ */
-/*      Underline link      */
-/* ------------------------ */
-// .tab-link {
-//   &,
-//   &:link,
-//   &:visited {
-//     display: block;
-
-//     background-color: transparent;
-//     border: none;
-
-//     text-decoration: none;
-//     padding-block: 3rem;
-//     cursor: pointer;
-
-//     position: relative;
-//   }
-
-//   &__underline {
-//     display: block;
-//     width: 100%;
-//     height: 0.3rem;
-//     background-color: white;
-
-//     position: absolute;
-//     bottom: 0;
-//     left: 0;
-
-//     opacity: 0.5;
-//     transform: scaleX(0);
-
-//     transition: transform 0.2s, opacity 0.2s;
-
-//     &--scaled {
-//       transform: scaleX(1);
-//       opacity: 1;
-//     }
-//   }
-
-//   &:hover &__underline:not(&__underline--scaled),
-//   &:focus &__underline:not(&__underline--scaled) {
-//     transform: scaleX(1);
-//   }
-// }
 
 /* ------------------------ */
 /*         Separator        */
 /* ------------------------ */
 .separator {
   margin-block: 5rem 2rem;
-  border: none;
+  height: 1px;
   border-bottom: 1px solid hsl(var(--color-separator));
+
+  @include respond($bp-phone) {
+    margin-block: 2.5rem;
+  }
 }

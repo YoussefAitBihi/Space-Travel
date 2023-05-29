@@ -1,0 +1,16 @@
+.main-content {
+  &__picture-box {
+    max-width: 35rem;
+    margin: 4rem auto 0;
+  }
+
+  @include respond($bp-phone) {
+    &__infos {
+      display: block;
+
+      & > *:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}

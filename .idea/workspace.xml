@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="ead373d6-5e69-4730-90db-f6d3610ebb51" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/destination.html" beforeDir="false" afterPath="$PROJECT_DIR$/destination.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/navigation.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/navigation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/abstracts/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/abstracts/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_base.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_typography.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/base/_utility.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/base/_utility.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_grid.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/layout/_grid.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/layout/_navigation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/sass/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/sass/main.scss" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2QO63YSnDeRx0iGMciua7e8taUc" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ead373d6-5e69-4730-90db-f6d3610ebb51" name="Default Changelist" comment="" />
+      <created>1685212084909</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685212084909</updated>
+      <workItem from="1685212104506" duration="66000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

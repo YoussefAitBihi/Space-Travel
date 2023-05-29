@@ -22,14 +22,14 @@ In this section, we are going to create all variables and utility classes that a
 
 In this section, we are going to create the design system.
 
-# 6. Adapt the navigation for all devices
+# 6. Adapt the navigation to all devices
 
 In this section, and after already have created the navigation, we're going to adapt this one for all devices.
 
-<!-- # 6. Create The home page
+# 7. Create The home page
 
 In this section, we are going start to create to create the first page in our design system. This is the home page.
 
-# 7. Create Grid Container
+# 8. Create Grid Container
 
-In this this section, and before continue create our pages, we are going to create a grid container for all pages. -->
+In this this section, and before we continue create our pages, we are going to create a grid container for all pages.
