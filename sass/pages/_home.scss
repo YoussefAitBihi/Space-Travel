@@ -1,0 +1,20 @@
+.main-content {
+  &--home {
+    @include respond($bp-tablet) {
+      padding-block: 7rem;
+    }
+
+    @include respond($bp-phone) {
+      padding-block: 3rem;
+    }
+  }
+
+  &__header--home > h1 > span {
+    display: block;
+    margin-bottom: 1rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}

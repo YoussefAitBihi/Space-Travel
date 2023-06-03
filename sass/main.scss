@@ -7,12 +7,15 @@
 
 @import './layout/grid';
 @import './layout/header';
-@import './layout/navigation';
+@import './layout/primary-navigation';
+@import './layout/secondary-navigation';
 @import './layout/footer';
 
 @import './components/primary-button';
+@import './components/hamburger-icon';
 @import './components/components';
 @import './components/dot-indicator';
 @import './components/tab-link';
 
+@import './pages/destination';
 @import './pages/home';

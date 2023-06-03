@@ -24,10 +24,13 @@
     <link rel="stylesheet" href="./css/styles.css" />
 
     <title>Space travel - Where is your next destination?</title>
+
+    <script src="./js/navigation.js" defer></script>
+    <script src="./js/underline.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
-    <header class="primary-header d-flex">
+    <header class="primary-header d-flex gap">
       <!-- LOGO -->
       <div class="primary-header__logo-box">
         <img
@@ -37,47 +40,49 @@
         />
       </div>
 
+      <!-- Hamburger Icon -->
+      <div class="hamburger-icon" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <div class="hamburger-icon__layer hamburger-icon__layer--top"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--middle"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--bottom"></div>
+      </div>
+
       <!-- PRIMARY NAVIGATION -->
-      <nav class="primary-navigation">
-        <ul class="primary-navigation__list d-flex gap" data-tab="parent">
-          <li class="primary-navigation__item underline">
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-expanded="false"
+      >
+        <ul class="primary-navigation__list d-flex gap">
+          <li class="primary-navigation__item underline" data-page="">
             <a
               href="/"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
             >
-              <span class="primary-navigation__link--bold" data-tab="child"
-                >00</span
-              >home</a
+              <span class="primary-navigation__link--bold">00</span>home</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="destination">
             <a
               href="destination.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >01</span
+              ><span class="primary-navigation__link--bold">01</span
               >destination</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="crew">
             <a
               href="crew.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >02</span
-              >crew</a
+              ><span class="primary-navigation__link--bold">02</span>crew</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="technology">
             <a
               href="technology.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >03</span
+              ><span class="primary-navigation__link--bold">03</span
               >technology</a
             >
           </li>
@@ -86,85 +91,86 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="main-content grid-container">
+    <main class="main-content grid-container grid-container--destination gap">
       <div class="main-content__left">
-        <h2
-          class="heading-2 font-family-primary-conds font-size-500 font-weight-regular text-uppercase letter-spacing-big"
-        >
-          <span>01</span>pick your destination
-        </h2>
-        <div class="main-content__picture-box">
+        <header class="main-content__header main-content__header--destination">
+          <h1
+            class="text-uppercase font-family-primary-conds font-size-500 text-white letter-spacing-big heading-1"
+          >
+            <span class="main-content__header--numbered">01</span>pick your
+            destination
+          </h1>
+        </header>
+        <figure class="main-content__picture-box">
           <img
             src="./assets/destination/image-moon.png"
             alt="Moon picture"
             class="main-content__picture"
           />
-        </div>
+        </figure>
       </div>
+
       <div class="main-content__right">
-        <nav class="secondary-navigation d-flex gap">
+        <nav class="secondary-navigation gap">
           <button
             aria-selected="true"
-            class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+            class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white underline"
           >
-            moon
-            <span class="tab-link__underline tab-link__underline--scaled">
-            </span></button
+            moon</button
           ><button
             aria-selected="false"
-            class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+            class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
           >
-            mars
-            <span class="tab-link__underline"></span></button
+            mars</button
           ><button
             aria-selected="false"
-            class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+            class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
           >
             europa
-            <span class="tab-link__underline"></span>
           </button>
           <button
             aria-selected="false"
-            class="tab-link font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+            class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
           >
             titan
-            <span class="tab-link__underline"></span>
           </button>
         </nav>
-        <h1
-          class="font-family-secondary font-size-800 text-white text-uppercase"
-        >
-          moon
-        </h1>
-        <p class="text-light">
-          See our planet as you’ve never seen it before. A perfect relaxing trip
-          away to help regain perspective and come back refreshed. While you’re
-          there, take in some history by visiting the Luna 2 and Apollo 11
-          landing sites.
-        </p>
-        <hr class="separator" />
-        <div class="d-flex gap" style="--gap: 5rem">
-          <div class="main-content__distance text-uppercase">
-            <span
-              class="main-content__distance-title font-family-primary-conds font-size-200 letter-spacing-small text-light"
-              >avg. distance</span
-            ><br />
-            <span
-              class="main-content__distance-value font-family-secondary font-size-500 text-white"
-              >384,000 km</span
-            >
-          </div>
-          <div class="main-content__time text-uppercase">
-            <span
-              class="main-content__time-title font-family-primary-conds font-size-200 letter-spacing-small text-light"
-              >est. travel time</span
-            ><br />
-            <span
-              class="main-content__time-value font-family-secondary font-size-500 text-white"
-              >3 days</span
-            >
-          </div>
-        </div>
+
+        <article class="main-content__article">
+          <h2
+            class="font-family-secondary font-size-800 text-uppercase text-white"
+          >
+            mars
+          </h2>
+          <p class="text-light">
+            Don’t forget to pack your hiking boots. You’ll need them to tackle
+            Olympus Mons, the tallest planetary mountain in our solar system.
+            It’s two and a half times the size of Everest!
+          </p>
+          <div class="separator"></div>
+          <ul class="main-content__infos list-unstyled d-inline-flex gap">
+            <li class="text-uppercase">
+              <h3
+                class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+              >
+                avg. distance
+              </h3>
+              <p class="font-family-secondary font-size-500 text-white">
+                255 mil. km
+              </p>
+            </li>
+            <li class="text-uppercase">
+              <h3
+                class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+              >
+                est. travel time
+              </h3>
+              <p class="font-family-secondary font-size-500 text-white">
+                9 months
+              </p>
+            </li>
+          </ul>
+        </article>
       </div>
     </main>
 

@@ -8,17 +8,16 @@ body {
 
   line-height: 1.5; // 1.4 default value
   min-height: 100vh; // Because we're not going to scrolling in this project
+  padding: 3rem 0 5rem;
 
   display: grid;
   grid-template-rows: min-content 1fr;
 
-  padding-block: 4rem 5.2rem;
-
-  overflow: hidden;
+  overflow-x: hidden;
 
   @include respond($bp-tablet) {
     --font-size-400: 1.6rem;
-    padding-block: 0;
+    padding: 0;
   }
 
   @include respond($bp-phone) {
@@ -26,17 +25,19 @@ body {
   }
 }
 
-.grid-container {
+.main-content {
   @include respond($bp-tablet) {
     text-align: center;
   }
-}
 
-// heading-2
-.heading-2 {
-  & > span {
+  &__header--numbered {
+    font-weight: bold;
     color: hsl(var(--color-primary-white) / 0.2);
     margin-right: 2rem;
+  }
+
+  &__header--destination {
+    text-align: left;
   }
 }
 

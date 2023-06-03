@@ -24,10 +24,13 @@
     <link rel="stylesheet" href="./css/styles.css" />
 
     <title>Space travel - Home page</title>
+
+    <script src="./js/navigation.js" defer></script>
+    <script src="./js/underline.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
-    <header class="primary-header d-flex">
+    <header class="primary-header d-flex gap">
       <!-- LOGO -->
       <div class="primary-header__logo-box">
         <img
@@ -37,47 +40,49 @@
         />
       </div>
 
+      <!-- Hamburger Icon -->
+      <div class="hamburger-icon" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <div class="hamburger-icon__layer hamburger-icon__layer--top"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--middle"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--bottom"></div>
+      </div>
+
       <!-- PRIMARY NAVIGATION -->
-      <nav class="primary-navigation">
-        <ul class="primary-navigation__list d-flex gap" data-tab="parent">
-          <li class="primary-navigation__item underline">
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-expanded="false"
+      >
+        <ul class="primary-navigation__list d-flex gap">
+          <li class="primary-navigation__item underline" data-page="">
             <a
               href="/"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
             >
-              <span class="primary-navigation__link--bold" data-tab="child"
-                >00</span
-              >home</a
+              <span class="primary-navigation__link--bold">00</span>home</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="destination">
             <a
               href="destination.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >01</span
+              ><span class="primary-navigation__link--bold">01</span
               >destination</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="crew">
             <a
               href="crew.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >02</span
-              >crew</a
+              ><span class="primary-navigation__link--bold">02</span>crew</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="technology">
             <a
               href="technology.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >03</span
+              ><span class="primary-navigation__link--bold">03</span
               >technology</a
             >
           </li>
@@ -86,14 +91,18 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="main-content grid-container">
+    <main
+      class="main-content main-content--home grid-container grid-container--home"
+    >
       <div class="main-content__left">
-        <h1 class="text-uppercase">
-          <span
-            class="font-family-primary-conds font-size-500 letter-spacing-big text-light"
-            >So, you want to travel to</span
-          ><br /><span class="font-family-secondary font-size-900">space</span>
-        </h1>
+        <header class="main-content__header main-content__header--home">
+          <h1 class="text-uppercase">
+            <span
+              class="font-family-primary-conds font-size-500 letter-spacing-big text-light"
+              >So, you want to travel to</span
+            ><span class="font-family-secondary font-size-900">space</span>
+          </h1>
+        </header>
         <p class="text-light">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
@@ -101,6 +110,7 @@
           experience!
         </p>
       </div>
+
       <div class="main-content__right">
         <a
           href="#!"
@@ -109,7 +119,5 @@
         >
       </div>
     </main>
-
-    <script src="./js/script.js"></script>
   </body>
 </html>

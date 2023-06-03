@@ -2,5 +2,52 @@
   align-items: center;
   justify-content: space-between;
 
-  padding-left: 5rem;
+  position: relative;
+
+  @include respond($bp-tablet) {
+    margin: 0;
+
+    --gap: 1rem;
+  }
+
+  &::before {
+    content: '';
+    display: block;
+
+    flex: 1;
+    height: 1px;
+
+    background-color: hsl(var(--color-primary-white) / 0.2);
+
+    transform: translateX(6rem);
+    z-index: 100;
+
+    @include respond($bp-tablet) {
+      display: none;
+    }
+  }
+
+  &__logo-box {
+    margin-left: 7rem;
+
+    order: -1;
+
+    @include respond($bp-tablet) {
+      margin-left: 1rem;
+    }
+
+    @include respond($bp-phone) {
+      margin: 2rem;
+
+      align-self: flex-start;
+    }
+  }
+
+  &__logo {
+    max-width: min-content;
+
+    @include respond($bp-tablet) {
+      max-width: 100%;
+    }
+  }
 }

@@ -1,0 +1,106 @@
+.primary-navigation {
+  display: flex;
+  justify-content: center;
+
+  max-width: 80rem;
+  width: 100%;
+  background-color: hsl(var(--color-primary-dark));
+
+  position: relative;
+  transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+
+  @supports (backdrop-filter: blur(1rem)) {
+    background-color: hsl(var(--color-primary-white) / 0.04);
+    backdrop-filter: blur(1rem);
+  }
+
+  @include respond($bp-tablet) {
+    max-width: 45rem;
+  }
+
+  @include respond($bp-phone) {
+    padding-inline: 0;
+
+    height: 100%;
+    max-width: 66%;
+
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+
+    overflow: hidden;
+
+    &[aria-expanded='true'] {
+      transform: translateX(0%);
+    }
+
+    &[aria-expanded='false'] {
+      transform: translateX(100%);
+    }
+  }
+
+  &__list {
+    --gap: 6rem;
+    list-style: none;
+
+    @include respond($bp-tablet) {
+      --gap: 2rem;
+    }
+
+    @include respond($bp-phone) {
+      --gap: 0;
+
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding-top: 10rem;
+    }
+  }
+
+  &__item.underline {
+    @include respond($bp-phone) {
+      border-bottom: none;
+      border-right: 0.3rem solid hsl(var(--color-primary-white));
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      display: block;
+
+      color: hsl(var(--color-primary-white));
+      padding-block: 3rem;
+
+      @include respond($bp-tablet) {
+        padding-block: 2rem;
+
+        --font-size-300: 1.4rem;
+      }
+
+      @include respond($bp-phone) {
+        margin-left: 3rem;
+        padding-block: 0.4rem;
+        margin-bottom: 2rem;
+        --font-size-300: 1.6rem;
+      }
+    }
+
+    &--bold {
+      font-weight: 700;
+      margin-right: 1rem;
+
+      @include respond($bp-tablet) {
+        display: none;
+      }
+
+      @include respond($bp-phone) {
+        display: inline-block;
+      }
+    }
+  }
+}
+
+// aria: accessible rich internet application, it gives extra context to assistive technologies
+// For our context, let assistive technology know which tabs we're gonna open

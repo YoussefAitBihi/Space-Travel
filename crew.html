@@ -22,7 +22,73 @@
 
     <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="./css/styles.css" />
+
     <title>Space travel - Our crew is ready for you</title>
+
+    <!-- CUSTOM JS -->
+    <script src="./js/navigation.js" defer></script>
+    <script src="./js/underline.js" defer></script>
   </head>
-  <body></body>
+  <body>
+    <!-- HEADER -->
+    <header class="primary-header d-flex gap">
+      <!-- LOGO -->
+      <div class="primary-header__logo-box">
+        <img
+          src="./assets/shared/logo.svg"
+          alt="Space travel logo"
+          class="primary-header__logo"
+        />
+      </div>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger-icon" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <div class="hamburger-icon__layer hamburger-icon__layer--top"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--middle"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--bottom"></div>
+      </div>
+
+      <!-- PRIMARY NAVIGATION -->
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-expanded="false"
+      >
+        <ul class="primary-navigation__list d-flex gap">
+          <li class="primary-navigation__item underline" data-page="">
+            <a
+              href="/"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+            >
+              <span class="primary-navigation__link--bold">00</span>home</a
+            >
+          </li>
+          <li class="primary-navigation__item" data-page="destination">
+            <a
+              href="destination.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              ><span class="primary-navigation__link--bold">01</span
+              >destination</a
+            >
+          </li>
+          <li class="primary-navigation__item" data-page="crew">
+            <a
+              href="crew.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              ><span class="primary-navigation__link--bold">02</span>crew</a
+            >
+          </li>
+          <li class="primary-navigation__item" data-page="technology">
+            <a
+              href="technology.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              ><span class="primary-navigation__link--bold">03</span
+              >technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
 </html>
