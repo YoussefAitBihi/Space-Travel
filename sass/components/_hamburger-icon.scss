@@ -1,0 +1,50 @@
+.hamburger-icon {
+  display: none;
+
+  position: fixed;
+  top: 3rem;
+  right: 2rem;
+  z-index: 2000;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include respond($bp-phone) {
+    display: block;
+  }
+
+  &__layer {
+    width: 3rem;
+    height: 0.2rem;
+    background-color: hsl(var(--color-primary-white));
+    border-radius: 0.2rem;
+
+    transition: all 0.25s cubic-bezier(0.05, 1.04, 0.72, 0.98);
+
+    &:not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &:has(:not(&--close)):hover &__layer--top {
+    transform: translateY(-0.2rem);
+  }
+
+  &:has(:not(&--close)):hover &__layer--bottom {
+    transform: translateY(0.2rem);
+  }
+
+  &--close &__layer--top {
+    transform: rotate(45deg) !important;
+  }
+
+  &--close &__layer--middle {
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  &--close &__layer--bottom {
+    transform: translateY(-2rem) rotate(-45deg) !important;
+  }
+}

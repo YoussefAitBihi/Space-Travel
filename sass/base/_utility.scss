@@ -156,23 +156,20 @@
 /*      Link Underlined     */
 /* ------------------------ */
 .underline {
-  &,
-  & ~ *:not(.underline) {
+  & ~ * {
     border: none;
   }
 
-  border-bottom: 3px solid currentColor;
+  border: none;
+  border-bottom: 0.3rem solid hsl(var(--color-primary-white));
 
-  @include respond($bp-phone) {
-    &--to-left {
-      border-bottom: 0;
-      border-right: 3px solid currentColor;
-    }
+  & ~ * {
+    border-bottom: 0.3rem solid transparent;
   }
 
-  & ~ *:not(.underline):hover,
-  & ~ *:not(.underline):focus {
-    border-bottom: 3px solid hsl(var(--color-primary-white) / 0.5);
+  & ~ *:has(:not(.underline)):hover,
+  & ~ *:has(:not(.underline)):focus {
+    border-bottom-color: hsl(var(--color-primary-white) / 0.2);
   }
 }
 

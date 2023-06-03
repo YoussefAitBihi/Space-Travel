@@ -26,6 +26,7 @@
     <title>Space travel - Where is your next destination?</title>
 
     <script src="./js/navigation.js" defer></script>
+    <script src="./js/underline.js" defer></script>
   </head>
   <body>
     <!-- HEADER -->
@@ -39,69 +40,49 @@
         />
       </div>
 
+      <!-- Hamburger Icon -->
+      <div class="hamburger-icon" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <div class="hamburger-icon__layer hamburger-icon__layer--top"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--middle"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--bottom"></div>
+      </div>
+
       <!-- PRIMARY NAVIGATION -->
-      <nav class="primary-navigation">
-        <!-- MOBILE ICON -->
-        <div class="primary-navigation__hamburger-icon-box">
-          <input
-            type="checkbox"
-            checked
-            id="navigation-link"
-            class="primary-navigation__hamburger-icon-checkbox"
-            aria-hidden="true"
-          />
-          <label for="navigation-link">
-            <div
-              class="primary-navigation__hamburger-icon"
-              aria-label="Closed Icon"
-            >
-              <span class="sr-only">Menu</span>
-            </div>
-          </label>
-        </div>
-        <ul
-          class="primary-navigation__list d-flex gap"
-          data-tab="parent"
-          aria-expanded="true"
-        >
-          <li class="primary-navigation__item underline underline--to-left">
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-expanded="false"
+      >
+        <ul class="primary-navigation__list d-flex gap">
+          <li class="primary-navigation__item underline" data-page="">
             <a
               href="/"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
             >
-              <span class="primary-navigation__link--bold" data-tab="child"
-                >00</span
-              >home</a
+              <span class="primary-navigation__link--bold">00</span>home</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="destination">
             <a
               href="destination.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >01</span
+              ><span class="primary-navigation__link--bold">01</span
               >destination</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="crew">
             <a
               href="crew.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >02</span
-              >crew</a
+              ><span class="primary-navigation__link--bold">02</span>crew</a
             >
           </li>
-          <li class="primary-navigation__item">
+          <li class="primary-navigation__item" data-page="technology">
             <a
               href="technology.html"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
-              data-tab="child"
-              ><span class="primary-navigation__link--bold" data-tab="child"
-                >03</span
+              ><span class="primary-navigation__link--bold">03</span
               >technology</a
             >
           </li>
@@ -116,7 +97,8 @@
           <h1
             class="text-uppercase font-family-primary-conds font-size-500 text-white letter-spacing-big heading-1"
           >
-            <span>01</span>pick your destination
+            <span class="main-content__header--numbered">01</span>pick your
+            destination
           </h1>
         </header>
         <figure class="main-content__picture-box">

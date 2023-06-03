@@ -30,6 +30,12 @@ body {
     text-align: center;
   }
 
+  &__header--numbered {
+    font-weight: bold;
+    color: hsl(var(--color-primary-white) / 0.2);
+    margin-right: 2rem;
+  }
+
   &__header--destination {
     text-align: left;
   }

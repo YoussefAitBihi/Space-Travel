@@ -20,6 +20,7 @@
     background-color: hsl(var(--color-primary-white) / 0.2);
 
     transform: translateX(6rem);
+    z-index: 100;
 
     @include respond($bp-tablet) {
       display: none;
