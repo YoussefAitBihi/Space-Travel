@@ -1,0 +1,25 @@
+.indicators {
+  &__item {
+    width: 5rem;
+    height: 5rem;
+    background-color: transparent;
+    color: hsl(var(--color-primary-white));
+    border: 1px solid hsl(var(--color-primary-white) / 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+
+    display: grid;
+    place-items: center;
+
+    &[aria-selected='true'] {
+      background-color: hsl(var(--color-primary-white));
+      color: hsl(var(--color-primary-dark));
+    }
+
+    &[aria-selected='false']:hover,
+    &[aria-selected='false']:focus {
+      border: 1px solid hsl(var(--color-primary-white));
+    }
+  }
+}

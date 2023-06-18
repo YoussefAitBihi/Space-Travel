@@ -1,14 +1,17 @@
-.main-content {
-  &--home {
-    @include respond($bp-tablet) {
-      padding-block: 7rem;
-    }
+.body--home {
+  background-image: url(../assets/home/background-home-desktop.jpg);
 
-    @include respond($bp-phone) {
-      padding-block: 3rem;
-    }
+  @include respond($bp-tablet) {
+    background-image: url(../assets/home/background-home-tablet.jpg);
   }
 
+  @include respond($bp-phone) {
+    background-image: url(../assets/home/background-home-mobile.jpg);
+    background-position: bottom left;
+  }
+}
+
+.main-content {
   &__header--home > h1 > span {
     display: block;
     margin-bottom: 1rem;

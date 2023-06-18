@@ -28,7 +28,7 @@
     <script src="./js/navigation.js" defer></script>
     <script src="./js/underline.js" defer></script>
   </head>
-  <body>
+  <body class="body--home">
     <!-- HEADER -->
     <header class="primary-header d-flex gap">
       <!-- LOGO -->
@@ -40,7 +40,7 @@
         />
       </div>
 
-      <!-- Hamburger Icon -->
+      <!-- HAMBURGER ICON -->
       <div class="hamburger-icon" aria-controls="primary-navigation">
         <span class="sr-only">Menu</span>
         <div class="hamburger-icon__layer hamburger-icon__layer--top"></div>
@@ -55,7 +55,7 @@
         aria-expanded="false"
       >
         <ul class="primary-navigation__list d-flex gap">
-          <li class="primary-navigation__item underline" data-page="">
+          <li class="primary-navigation__item" data-page="">
             <a
               href="/"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
@@ -92,9 +92,9 @@
 
     <!-- MAIN CONTENT -->
     <main
-      class="main-content main-content--home grid-container grid-container--home"
+      class="main-content main-content--home grid-container grid-container--home flow"
     >
-      <div class="main-content__left">
+      <div class="grid-container__left main-content__left">
         <header class="main-content__header main-content__header--home">
           <h1 class="text-uppercase">
             <span
@@ -103,7 +103,7 @@
             ><span class="font-family-secondary font-size-900">space</span>
           </h1>
         </header>
-        <p class="text-light">
+        <p class="main-content__paragraph text-light">
           Let’s face it; if you want to go to space, you might as well genuinely
           go to outer space and not hover kind of on the edge of it. Well sit
           back, and relax because we’ll give you a truly out of this world
@@ -111,9 +111,9 @@
         </p>
       </div>
 
-      <div class="main-content__right">
+      <div class="grid-container__right main-content__right">
         <a
-          href="#!"
+          href="/destination.html"
           class="primary-button font-family-secondary font-size-600 text-dark text-uppercase letter-spacing-small"
           >Explore</a
         >

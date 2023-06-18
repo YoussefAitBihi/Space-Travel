@@ -1,24 +1,24 @@
 .primary-header {
   align-items: center;
   justify-content: space-between;
-
   position: relative;
+  margin-bottom: clamp(0rem, 4vw - 0.4rem, 5rem);
 
   @include respond($bp-tablet) {
-    margin: 0;
-
     --gap: 1rem;
+  }
+
+  @include respond($bp-phone) {
+    margin-bottom: 0;
   }
 
   &::before {
     content: '';
     display: block;
-
     flex: 1;
     height: 1px;
 
     background-color: hsl(var(--color-primary-white) / 0.2);
-
     transform: translateX(6rem);
     z-index: 100;
 
@@ -29,7 +29,6 @@
 
   &__logo-box {
     margin-left: 7rem;
-
     order: -1;
 
     @include respond($bp-tablet) {
@@ -38,7 +37,6 @@
 
     @include respond($bp-phone) {
       margin: 2rem;
-
       align-self: flex-start;
     }
   }

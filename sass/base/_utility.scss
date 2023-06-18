@@ -2,9 +2,9 @@
 /*           GRID           */
 /* ------------------------ */
 .container {
-  max-width: 114rem;
+  max-width: 120rem;
   margin-inline: auto;
-  padding-inline: 1.6rem;
+  padding-inline: 2rem;
 }
 
 .d-flex {
@@ -88,7 +88,7 @@
 
 // FONT-SIZES
 .font-size-900 {
-  font-size: clamp(8rem, 15vw, var(--font-size-900));
+  font-size: clamp(7.5rem, 15vw, var(--font-size-900));
 }
 
 .font-size-800 {
@@ -96,11 +96,11 @@
 }
 
 .font-size-700 {
-  font-size: var(--font-size-700);
+  font-size: clamp(2.4rem, 5vw - 1rem, var(--font-size-700));
 }
 
 .font-size-600 {
-  font-size: var(--font-size-600);
+  font-size: clamp(var(--font-size-300), 5vw - 1rem, var(--font-size-600));
 }
 
 .font-size-500 {
@@ -112,7 +112,7 @@
 }
 
 .font-size-300 {
-  font-size: var(--font-size-300);
+  font-size: clamp(var(--font-size-200), 5vw, var(--font-size-300));
 }
 
 .font-size-200 {
@@ -152,25 +152,21 @@
   list-style: none;
 }
 
+.flow {
+  & > *:not(:last-child) {
+    margin-bottom: var(--flow-margin);
+  }
+
+  &--small {
+    --flow-margin: 0.7rem;
+  }
+}
+
 /* ------------------------ */
 /*      Link Underlined     */
 /* ------------------------ */
 .underline {
-  & ~ * {
-    border: none;
-  }
-
-  border: none;
   border-bottom: 0.3rem solid hsl(var(--color-primary-white));
-
-  & ~ * {
-    border-bottom: 0.3rem solid transparent;
-  }
-
-  & ~ *:has(:not(.underline)):hover,
-  & ~ *:has(:not(.underline)):focus {
-    border-bottom-color: hsl(var(--color-primary-white) / 0.2);
-  }
 }
 
 /* ------------------------ */

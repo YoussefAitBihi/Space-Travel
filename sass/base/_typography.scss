@@ -2,22 +2,26 @@ body {
   font-family: var(--font-family-primary-normal);
   font-size: var(--font-size-400);
   font-weight: 400; // regular (normal)
-  background: url(../assets/home/background-home-desktop.jpg) center
-    center/cover no-repeat;
+  // background: url(../assets/home/background-home-desktop.jpg) center
+  //   center/cover no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: hsl(var(--color-primary-white));
 
   line-height: 1.5; // 1.4 default value
   min-height: 100vh; // Because we're not going to scrolling in this project
-  padding: 3rem 0 5rem;
+  padding-block: 2rem max(5rem, 10vh);
 
   display: grid;
-  grid-template-rows: min-content 1fr;
+  grid-template-rows: repeat(2, min-content);
 
   overflow-x: hidden;
 
   @include respond($bp-tablet) {
     --font-size-400: 1.6rem;
-    padding: 0;
+    padding-block: 0;
+    padding-bottom: max(5rem, 10vh);
   }
 
   @include respond($bp-phone) {
@@ -31,13 +35,23 @@ body {
   }
 
   &__header--numbered {
-    font-weight: bold;
-    color: hsl(var(--color-primary-white) / 0.2);
-    margin-right: 2rem;
+    @media only screen and (min-width: calc($bp-phone + 1px)) {
+      text-align: left;
+      margin: 0;
+    }
+
+    & > span {
+      font-weight: bold;
+      color: hsl(var(--color-primary-white) / 0.2);
+      margin-right: clamp(0.7rem, 3vw, 2rem);
+    }
   }
 
-  &__header--destination {
-    text-align: left;
+  @media only screen and (max-width: $bp-tablet) {
+    &__paragraph {
+      max-width: 60ch;
+      margin-inline: auto;
+    }
   }
 }
 
@@ -47,6 +61,8 @@ body {
 // We can use the :where because the inside of it there is no specificity
 // :is() The selector inside the first one has a specificity
 // :where() The selector inside the first one has no specificity
-.flow > * + * {
-  margin-bottom: var(--flow-margin);
-}
+// .flow > * + * {
+//   margin-bottom: var(--flow-margin);
+// }
+
+// When the image is a flex item we should nest it inside a div

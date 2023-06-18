@@ -3,6 +3,8 @@ node_modules/
 
 # Avoid the prettier configuration
 .prettierrc
+.idea
+.vscode
 
 # Avoid accidental upload of the sketch, figma and/or xd design files
 *.fig
