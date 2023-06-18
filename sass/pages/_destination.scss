@@ -1,7 +1,25 @@
+.body--destination {
+  background-image: url(../assets/destination/background-destination-desktop.jpg);
+
+  @include respond($bp-tablet) {
+    background-image: url(../assets/destination/background-destination-tablet.jpg);
+  }
+
+  @include respond($bp-phone) {
+    background-image: url(../assets/destination/background-destination-mobile.jpg);
+    background-position: bottom left;
+  }
+}
+
 .main-content {
+  &--destination {
+    &:has(picture) picture {
+      margin: 4rem auto 0;
+    }
+  }
+
   &__picture-box {
-    max-width: 35rem;
-    margin: 4rem auto 0;
+    max-width: clamp(25rem, 27vw, 35rem);
   }
 
   @include respond($bp-phone) {
@@ -12,5 +30,15 @@
         margin-bottom: 2rem;
       }
     }
+  }
+}
+
+@keyframes showArticle {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 100%;
   }
 }

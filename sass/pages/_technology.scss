@@ -1,0 +1,18 @@
+.body--technology {
+  background-image: url(../assets/technology/background-technology-desktop.jpg);
+
+  @include respond($bp-tablet) {
+    background-image: url(../assets/technology/background-technology-tablet.jpg);
+  }
+
+  @include respond($bp-phone) {
+    background-image: url(../assets/technology/background-technology-mobile.jpg);
+  }
+}
+
+@include respond($bp-tablet) {
+  .main-content.gap {
+    gap: 0;
+    row-gap: var(--gap);
+  }
+}

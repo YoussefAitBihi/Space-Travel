@@ -23,7 +23,228 @@
     <!-- CUSTOM STYLE -->
     <link rel="stylesheet" href="./css/styles.css" />
 
-    <title>Space travel - We make all our technologies for you</title>
+    <title>Space travel - Our technologies is ready for you</title>
+
+    <!-- CUSTOM JS -->
+    <script src="./js/navigation.js" defer></script>
+    <script src="./js/underline.js" defer></script>
+    <script src="./js/tabs.js" defer></script>
   </head>
-  <body></body>
+  <body class="body--technology">
+    <!-- HEADER -->
+    <header class="primary-header d-flex gap">
+      <!-- LOGO -->
+      <div class="primary-header__logo-box">
+        <img
+          src="./assets/shared/logo.svg"
+          alt="Space travel logo"
+          class="primary-header__logo"
+        />
+      </div>
+
+      <!-- Hamburger Icon -->
+      <div class="hamburger-icon" aria-controls="primary-navigation">
+        <span class="sr-only">Menu</span>
+        <div class="hamburger-icon__layer hamburger-icon__layer--top"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--middle"></div>
+        <div class="hamburger-icon__layer hamburger-icon__layer--bottom"></div>
+      </div>
+
+      <!-- PRIMARY NAVIGATION -->
+      <nav
+        class="primary-navigation"
+        id="primary-navigation"
+        aria-expanded="false"
+      >
+        <ul class="primary-navigation__list d-flex gap">
+          <li class="primary-navigation__item" data-page="">
+            <a
+              href="/"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+            >
+              <span class="primary-navigation__link--bold">00</span>home</a
+            >
+          </li>
+          <li class="primary-navigation__item" data-page="destination">
+            <a
+              href="destination.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              ><span class="primary-navigation__link--bold">01</span
+              >destination</a
+            >
+          </li>
+          <li class="primary-navigation__item" data-page="crew">
+            <a
+              href="crew.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              ><span class="primary-navigation__link--bold">02</span>crew</a
+            >
+          </li>
+          <li class="primary-navigation__item" data-page="technology">
+            <a
+              href="technology.html"
+              class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
+              ><span class="primary-navigation__link--bold">03</span
+              >technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content grid-container--technology gap">
+      <!-- SLIDER INDICATORS -->
+      <div class="indicators flow gap" data-tab="parent">
+        <button
+          class="indicators__item"
+          aria-selected="true"
+          aria-controls="article-vehicle"
+          data-tab="child"
+          data-picture="picture-vehicle"
+          tabindex="0"
+        >
+          <span class="sr-only">Slider 1</span>
+          1
+        </button>
+        <button
+          class="indicators__item"
+          aria-selected="false"
+          aria-controls="article-spaceport"
+          data-tab="child"
+          data-picture="picture-spaceport"
+          tabindex="1"
+        >
+          <span class="sr-only">Slider 2</span>
+          2
+        </button>
+        <button
+          class="indicators__item"
+          aria-selected="false"
+          aria-controls="article-spacecapsule"
+          data-tab="child"
+          data-picture="picture-space-capsule"
+          tabindex="2"
+        >
+          <span class="sr-only">Slider 3</span>
+          3
+        </button>
+      </div>
+
+      <!-- HEADER -->
+      <header class="main-content__header">
+        <h1
+          class="text-uppercase font-family-primary-conds font-size-500 text-white letter-spacing-big main-content__header--numbered"
+        >
+          <span class="main-content__header--numbered">03</span>space launch 101
+        </h1>
+      </header>
+
+      <!-- ARTICLES -->
+
+      <!-- LAUNCH VEHICLE -->
+      <article
+        class="main-article flow flow--small"
+        id="article-vehicle"
+        article-index="0"
+      >
+        <h2
+          class="font-family-secondary font-weight-regular text-uppercase text-white"
+        >
+          <span class="text-light font-size-600">the terminology...</span>
+          <span class="font-size-700">launch vehicle</span>
+        </h2>
+        <p class="text-light main-content__paragraph">
+          A launch vehicle or carrier rocket is a rocket-propelled vehicle used
+          to carry a payload from Earth's surface to space, usually to Earth
+          orbit or beyond. Our WEB-X carrier rocket is the most powerful in
+          operation. Standing 150 metres tall, it's quite an awe-inspiring sight
+          on the launch pad!
+        </p>
+      </article>
+
+      <!-- SPACEPORT -->
+      <article
+        hidden
+        class="main-article flow flow--small"
+        id="article-spaceport"
+        article-index="1"
+      >
+        <h2
+          class="font-family-secondary font-weight-regular text-uppercase text-white"
+        >
+          <span class="text-light font-size-600">the terminology...</span>
+          <span class="font-size-700">spaceport</span>
+        </h2>
+        <p class="text-light main-content__paragraph">
+          A spaceport or cosmodrome is a site for launching (or receiving)
+          spacecraft, by analogy to the seaport for ships or airport for
+          aircraft. Based in the famous Cape Canaveral, our spaceport is ideally
+          situated to take advantage of the Earth’s rotation for launch.
+        </p>
+      </article>
+
+      <!-- SPACE CAPSULE -->
+      <article
+        hidden
+        class="main-article flow flow--small"
+        id="article-spacecapsule"
+        article-index="2"
+      >
+        <h2
+          class="font-family-secondary font-weight-regular text-uppercase text-white"
+        >
+          <span class="text-light font-size-600">the terminology...</span>
+          <span class="font-size-700">spaceport</span>
+        </h2>
+        <p class="text-light main-content__paragraph">
+          A space capsule is an often-crewed spacecraft that uses a blunt-body
+          reentry capsule to reenter the Earth's atmosphere without wings. Our
+          capsule is where you'll spend your time during the flight. It includes
+          a space gym, cinema, and plenty of other activities to keep you
+          entertained.
+        </p>
+      </article>
+
+      <!-- PICTURES -->
+
+      <!-- VEHICLE'S PICTURE -->
+      <picture id="picture-vehicle" picture-index="0">
+        <source
+          srcset="./assets/technology/image-launch-vehicle-portrait.jpg"
+          media="(min-width: 769px)"
+          alt="Vehicle portrait"
+        />
+        <img
+          src="./assets/technology/image-launch-vehicle-landscape.jpg"
+          alt="Vehicle landscape"
+        />
+      </picture>
+
+      <!-- SPACEPORT'S PICTURE -->
+      <picture hidden id="picture-spaceport" picture-index="1">
+        <source
+          srcset="./assets/technology/image-spaceport-portrait.jpg"
+          media="(min-width: 769px)"
+          alt="Spaceport portrait"
+        />
+        <img
+          src="./assets/technology/image-spaceport-landscape.jpg"
+          alt="Spaceport landscape"
+        />
+      </picture>
+
+      <!-- CAPSULE SPACE'S PICTURE -->
+      <picture hidden id="picture-space-capsule" picture-index="2">
+        <source
+          srcset="./assets/technology/image-space-capsule-portrait.jpg"
+          media="(min-width: 769px)"
+          alt="Space Capsule portrait"
+        />
+        <img
+          src="./assets/technology/image-space-capsule-landscape.jpg"
+          alt="Space Capsule landscape"
+        />
+      </picture>
+    </main>
+  </body>
 </html>

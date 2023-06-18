@@ -28,8 +28,9 @@
     <!-- CUSTOM JS -->
     <script src="./js/navigation.js" defer></script>
     <script src="./js/underline.js" defer></script>
+    <script src="./js/tabs.js" defer></script>
   </head>
-  <body>
+  <body class="body--crew">
     <!-- HEADER -->
     <header class="primary-header d-flex gap">
       <!-- LOGO -->
@@ -56,7 +57,7 @@
         aria-expanded="false"
       >
         <ul class="primary-navigation__list d-flex gap">
-          <li class="primary-navigation__item underline" data-page="">
+          <li class="primary-navigation__item" data-page="">
             <a
               href="/"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
@@ -90,5 +91,223 @@
         </ul>
       </nav>
     </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="main-content grid-container grid-container--crew flow">
+      <!-- DOTS -->
+      <div class="dots d-flex gap" data-tab="parent">
+        <button
+          class="dots__dot"
+          aria-selected="true"
+          aria-controls="article-douglas"
+          data-tab="child"
+          data-picture="picture-douglas"
+          tabindex="0"
+        >
+          <span class="sr-only">Slider 1</span>
+        </button>
+        <button
+          class="dots__dot"
+          aria-selected="false"
+          aria-controls="article-mark"
+          data-tab="child"
+          data-picture="picture-mark"
+          tabindex="1"
+        >
+          <span class="sr-only">Slider 2</span>
+        </button>
+        <button
+          class="dots__dot"
+          aria-selected="false"
+          aria-controls="article-victor"
+          data-tab="child"
+          data-picture="picture-glover"
+          tabindex="2"
+        >
+          <span class="sr-only">Slider 3</span>
+        </button>
+        <button
+          class="dots__dot"
+          aria-selected="false"
+          aria-controls="article-anousheh"
+          data-tab="child"
+          data-picture="picture-ansari"
+          tabindex="3"
+        >
+          <span class="sr-only">Slider 4</span>
+        </button>
+      </div>
+
+      <!-- HEADER -->
+      <header class="main-content__header">
+        <h1
+          class="text-uppercase font-family-primary-conds font-size-500 text-white letter-spacing-big main-content__header--numbered"
+        >
+          <span class="main-content__header--numbered">02</span>meet your crew
+        </h1>
+      </header>
+
+      <!-- ARTICLES -->
+
+      <!-- DOUGLAS HURLEY'S ARTICLE -->
+      <article
+        class="main-article flow flow--small"
+        id="article-douglas"
+        article-index="0"
+      >
+        <h2
+          class="font-family-secondary font-weight-regular text-uppercase text-white"
+        >
+          <span class="font-size-600">commander</span>
+          <span class="font-size-700">douglas hurley</span>
+        </h2>
+        <p class="text-light main-content__paragraph">
+          Douglas Gerald Hurley is an American engineer, former Marine Corps
+          pilot and former NASA astronaut. He launched into space for the third
+          time as commander of Crew Dragon Demo-2.
+        </p>
+      </article>
+
+      <!-- MARK SHUTTLEWORTH'S ARTICLE -->
+      <article
+        hidden
+        class="main-article flow flow--small"
+        id="article-mark"
+        article-index="1"
+      >
+        <h2
+          class="font-family-secondary font-weight-regular text-uppercase text-white"
+        >
+          <span class="font-size-600">mission specialist</span>
+          <span class="font-size-700">mark shuttleworth</span>
+        </h2>
+        <p class="text-light main-content__paragraph">
+          Mark Richard Shuttleworth is the founder and CEO of Canonical, the
+          company behind the Linux-based Ubuntu operating system. Shuttleworth
+          became the first South African to travel to space as a space tourist.
+        </p>
+      </article>
+
+      <!-- VICTOR GLOVER'S ARTICLE -->
+      <article
+        hidden
+        class="main-article flow flow--small"
+        id="article-victor"
+        article-index="2"
+      >
+        <h2
+          class="font-family-secondary font-weight-regular text-uppercase text-white"
+        >
+          <span class="font-size-600">pilot</span>
+          <span class="font-size-700">victor glover</span>
+        </h2>
+        <p class="text-light main-content__paragraph">
+          Pilot on the first operational flight of the SpaceX Crew Dragon to the
+          International Space Station. Glover is a commander in the U.S. Navy
+          where he pilots an F/A-18.He was a crew member of Expedition 64, and
+          served as a station systems flight engineer.
+        </p>
+      </article>
+
+      <!-- ANOUSHEH ANSARI'S ARTICLE -->
+      <article
+        hidden
+        class="main-article flow flow--small"
+        id="article-anousheh"
+        article-index="3"
+      >
+        <h2
+          class="font-family-secondary font-weight-regular text-uppercase text-white"
+        >
+          <span class="font-size-600">flight engineer</span>
+          <span class="font-size-700">anousheh ansari</span>
+        </h2>
+        <p class="text-light main-content__paragraph">
+          Anousheh Ansari is an Iranian American engineer and co-founder of
+          Prodea Systems. Ansari was the fourth self-funded space tourist, the
+          first self-funded woman to fly to the ISS, and the first Iranian in
+          space.
+        </p>
+      </article>
+
+      <!-- DOUGLAS'S PICTURE -->
+      <picture
+        class="main-content__picture-box"
+        id="picture-douglas"
+        picture-index="0"
+      >
+        <source
+          srcset="./assets/crew/image-douglas-hurley.webp"
+          alt="Douglas Hurley's Picture"
+          type="image/webp"
+          class="main-content__picture"
+        />
+        <img
+          src="./assets/crew/image-douglas-hurley.png"
+          class="main-content__picture"
+          alt="Douglas Hurley's Picture"
+        />
+      </picture>
+
+      <!-- MARK'S PICTURE -->
+      <picture
+        hidden
+        class="main-content__picture-box"
+        id="picture-mark"
+        picture-index="1"
+      >
+        <source
+          srcset="./assets/crew/image-mark-shuttleworth.webp"
+          alt="Mark Shuttleworth's Picture"
+          type="image/webp"
+          class="main-content__picture"
+        />
+        <img
+          src="./assets/crew/image-mark-shuttleworth.png"
+          class="main-content__picture"
+          alt="Mark Shuttleworth's Picture"
+        />
+      </picture>
+
+      <!-- GLOVER'S PICTURE -->
+      <picture
+        hidden
+        class="main-content__picture-box"
+        id="picture-glover"
+        picture-index="2"
+      >
+        <source
+          srcset="./assets/crew/image-victor-glover.webp"
+          alt="Victor Glover's Picture"
+          type="image/webp"
+          class="main-content__picture"
+        />
+        <img
+          src="./assets/crew/image-victor-glover.png"
+          class="main-content__picture"
+          alt="Victor Glover's Picture"
+        />
+      </picture>
+
+      <!-- ANSARI'S PICTURE -->
+      <picture
+        hidden
+        class="main-content__picture-box"
+        id="picture-ansari"
+        picture-index="3"
+      >
+        <source
+          srcset="./assets/crew/image-anousheh-ansari.webp"
+          alt="Anousheh Ansari's Picture"
+          type="image/webp"
+          class="main-content__picture"
+        />
+        <img
+          src="./assets/crew/image-anousheh-ansari.png"
+          class="main-content__picture"
+          alt="Anousheh Ansari's Picture"
+        />
+      </picture>
+    </main>
   </body>
 </html>
