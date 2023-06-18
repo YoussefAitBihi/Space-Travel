@@ -27,8 +27,9 @@
 
     <script src="./js/navigation.js" defer></script>
     <script src="./js/underline.js" defer></script>
+    <script src="./js/tabs.js" defer></script>
   </head>
-  <body>
+  <body class="body--destination">
     <!-- HEADER -->
     <header class="primary-header d-flex gap">
       <!-- LOGO -->
@@ -55,7 +56,7 @@
         aria-expanded="false"
       >
         <ul class="primary-navigation__list d-flex gap">
-          <li class="primary-navigation__item underline" data-page="">
+          <li class="primary-navigation__item" data-page="">
             <a
               href="/"
               class="primary-navigation__link font-family-primary-conds font-size-300 letter-spacing-medium no-underline text-uppercase"
@@ -91,86 +92,309 @@
     </header>
 
     <!-- MAIN CONTENT -->
-    <main class="main-content grid-container grid-container--destination gap">
-      <div class="main-content__left">
+    <main class="main-content main-content--destination grid-container">
+      <div class="grid-container__left main-content__left">
         <header class="main-content__header main-content__header--destination">
           <h1
-            class="text-uppercase font-family-primary-conds font-size-500 text-white letter-spacing-big heading-1"
+            class="text-uppercase font-family-primary-conds font-size-500 text-white letter-spacing-big main-content__header--numbered"
           >
             <span class="main-content__header--numbered">01</span>pick your
             destination
           </h1>
         </header>
-        <figure class="main-content__picture-box">
+
+        <!-- MARS PICTURE -->
+        <picture
+          class="main-content__picture-box"
+          id="picture-mars"
+          picture-index="0"
+        >
+          <source
+            srcset="./assets/destination/image-mars.webp"
+            alt="Mars picture"
+            type="image/webp"
+          />
+          <img
+            src="./assets/destination/image-mars.png"
+            alt="Mars picture"
+            class="main-content__picture"
+          />
+        </picture>
+
+        <!-- MOON PICTURE -->
+        <picture
+          hidden
+          class="main-content__picture-box"
+          id="picture-moon"
+          picture-index="1"
+        >
+          <source
+            srcset="./assets/destination/image-moon.webp"
+            type="image/webp"
+            alt="Moon picture"
+          />
           <img
             src="./assets/destination/image-moon.png"
             alt="Moon picture"
             class="main-content__picture"
           />
-        </figure>
+        </picture>
+
+        <!-- EUROPA PICTURE -->
+        <picture
+          hidden
+          class="main-content__picture-box"
+          id="picture-europa"
+          picture-index="2"
+        >
+          <source
+            srcset="./assets/destination/image-europa.webp"
+            type="image/webp"
+            alt="Europa picture"
+          />
+          <img
+            src="./assets/destination/image-europa.png"
+            alt="Europa picture"
+            class="main-content__picture"
+          />
+        </picture>
+
+        <!-- TITAN PICTURE -->
+        <picture
+          hidden
+          class="main-content__picture-box"
+          id="picture-titan"
+          picture-index="3"
+        >
+          <source
+            srcset="./assets/destination/image-titan.webp"
+            type="image/webp"
+            alt="Titan picture"
+          />
+          <img
+            src="./assets/destination/image-titan.png"
+            alt="Titan picture"
+            class="main-content__picture"
+          />
+        </picture>
       </div>
 
-      <div class="main-content__right">
-        <nav class="secondary-navigation gap">
+      <div class="grid-container__right main-content__right">
+        <nav class="secondary-navigation gap" data-tab="parent">
           <button
             aria-selected="true"
-            class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white underline"
-          >
-            moon</button
-          ><button
-            aria-selected="false"
             class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+            aria-controls="article-mars"
+            data-tab="child"
+            data-picture="picture-mars"
+            tabindex="0"
           >
             mars</button
           ><button
             aria-selected="false"
             class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+            aria-controls="article-moon"
+            data-tab="child"
+            data-picture="picture-moon"
+            tabindex="1"
+          >
+            moon</button
+          ><button
+            aria-selected="false"
+            class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+            aria-controls="article-europa"
+            data-tab="child"
+            data-picture="picture-europa"
+            tabindex="2"
           >
             europa
           </button>
           <button
             aria-selected="false"
             class="font-family-primary-conds font-size-300 letter-spacing-medium text-uppercase text-white"
+            aria-controls="article-titan"
+            data-tab="child"
+            data-picture="picture-titan"
+            tabindex="3"
           >
             titan
           </button>
         </nav>
 
-        <article class="main-content__article">
-          <h2
-            class="font-family-secondary font-size-800 text-uppercase text-white"
+        <div class="main-content__articles">
+          <!-- MARS ARTICLE -->
+          <article
+            class="main-content__article"
+            id="article-mars"
+            article-index="0"
           >
-            mars
-          </h2>
-          <p class="text-light">
-            Don’t forget to pack your hiking boots. You’ll need them to tackle
-            Olympus Mons, the tallest planetary mountain in our solar system.
-            It’s two and a half times the size of Everest!
-          </p>
-          <div class="separator"></div>
-          <ul class="main-content__infos list-unstyled d-inline-flex gap">
-            <li class="text-uppercase">
-              <h3
-                class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
-              >
-                avg. distance
-              </h3>
-              <p class="font-family-secondary font-size-500 text-white">
-                255 mil. km
-              </p>
-            </li>
-            <li class="text-uppercase">
-              <h3
-                class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
-              >
-                est. travel time
-              </h3>
-              <p class="font-family-secondary font-size-500 text-white">
-                9 months
-              </p>
-            </li>
-          </ul>
-        </article>
+            <h2
+              class="font-family-secondary font-size-800 text-uppercase text-white"
+            >
+              mars
+            </h2>
+            <p class="text-light main-content__paragraph">
+              Don’t forget to pack your hiking boots. You’ll need them to tackle
+              Olympus Mons, the tallest planetary mountain in our solar system.
+              It’s two and a half times the size of Everest!
+            </p>
+            <div class="separator"></div>
+            <ul class="main-content__infos list-unstyled d-inline-flex gap">
+              <li class="text-uppercase">
+                <h3
+                  class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+                >
+                  avg. distance
+                </h3>
+                <p class="font-family-secondary font-size-500 text-white">
+                  255 mil. km
+                </p>
+              </li>
+              <li class="text-uppercase">
+                <h3
+                  class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+                >
+                  est. travel time
+                </h3>
+                <p class="font-family-secondary font-size-500 text-white">
+                  9 months
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- MOON ARTICLE -->
+          <article
+            hidden
+            class="main-content__article"
+            id="article-moon"
+            data-visible="false"
+            article-index="1"
+          >
+            <h2
+              class="font-family-secondary font-size-800 text-uppercase text-white"
+            >
+              moon
+            </h2>
+            <p class="text-light main-content__paragraph">
+              See our planet as you’ve never seen it before. A perfect relaxing
+              trip away to help regain perspective and come back refreshed.
+              While you’re there, take in some history by visiting the Luna 2
+              and Apollo 11 landing sites.
+            </p>
+            <div class="separator"></div>
+            <ul class="main-content__infos list-unstyled d-inline-flex gap">
+              <li class="text-uppercase">
+                <h3
+                  class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+                >
+                  avg. distance
+                </h3>
+                <p class="font-family-secondary font-size-500 text-white">
+                  384,400 km
+                </p>
+              </li>
+              <li class="text-uppercase">
+                <h3
+                  class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+                >
+                  est. travel time
+                </h3>
+                <p class="font-family-secondary font-size-500 text-white">
+                  3 days
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- EUROPA ARTICLE -->
+          <article
+            hidden
+            class="main-content__article"
+            id="article-europa"
+            data-visible="false"
+            article-index="2"
+          >
+            <h2
+              class="font-family-secondary font-size-800 text-uppercase text-white"
+            >
+              europa
+            </h2>
+            <p class="text-light main-content__paragraph">
+              The smallest of the four Galilean moons orbiting Jupiter, Europa
+              is a winter lover’s dream. With an icy surface, it’s perfect for a
+              bit of ice skating, curling, hockey, or simple relaxation in your
+              snug wintery cabin.
+            </p>
+            <div class="separator"></div>
+            <ul class="main-content__infos list-unstyled d-inline-flex gap">
+              <li class="text-uppercase">
+                <h3
+                  class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+                >
+                  avg. distance
+                </h3>
+                <p class="font-family-secondary font-size-500 text-white">
+                  628 MIL. km
+                </p>
+              </li>
+              <li class="text-uppercase">
+                <h3
+                  class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+                >
+                  3 years
+                </h3>
+                <p class="font-family-secondary font-size-500 text-white">
+                  9 months
+                </p>
+              </li>
+            </ul>
+          </article>
+
+          <!-- TITAN ARTICLE -->
+          <article
+            hidden
+            class="main-content__article"
+            id="article-titan"
+            data-visible="false"
+            article-index="3"
+          >
+            <h2
+              class="font-family-secondary font-size-800 text-uppercase text-white"
+            >
+              titan
+            </h2>
+            <p class="text-light main-content__paragraph">
+              The only moon known to have a dense atmosphere other than Earth,
+              Titan is a home away from home (just a few hundred degrees
+              colder!). As a bonus, you get striking views of the Rings of
+              Saturn.
+            </p>
+            <div class="separator"></div>
+            <ul class="main-content__infos list-unstyled d-inline-flex gap">
+              <li class="text-uppercase">
+                <h3
+                  class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+                >
+                  avg. distance
+                </h3>
+                <p class="font-family-secondary font-size-500 text-white">
+                  1.6 BIL. km
+                </p>
+              </li>
+              <li class="text-uppercase">
+                <h3
+                  class="font-family-primary-conds font-size-200 text-light letter-spacing-medium"
+                >
+                  est. travel time
+                </h3>
+                <p class="font-family-secondary font-size-500 text-white">
+                  7 years
+                </p>
+              </li>
+            </ul>
+          </article>
+        </div>
       </div>
     </main>
 

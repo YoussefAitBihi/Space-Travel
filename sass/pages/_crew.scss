@@ -1,0 +1,46 @@
+.body--crew {
+  background-image: linear-gradient(
+      90deg,
+      hsl(var(--color-primary-dark) / 0.5),
+      hsl(var(--color-primary-dark) / 0.6)
+    ),
+    url(../assets/crew/background-crew-desktop.jpg);
+
+  @include respond($bp-tablet) {
+    background-image: linear-gradient(
+        90deg,
+        hsl(var(--color-primary-dark) / 0.5),
+        hsl(var(--color-primary-dark) / 0.6)
+      ),
+      url(../assets/crew/background-crew-tablet.jpg);
+  }
+
+  @include respond($bp-phone) {
+    background-image: linear-gradient(
+        90deg,
+        hsl(var(--color-primary-dark) / 0.5),
+        hsl(var(--color-primary-dark) / 0.6)
+      ),
+      url(../assets/crew/background-crew-mobile.jpg);
+    background-image: url(../assets/crew/background-crew-mobile.jpg);
+  }
+}
+
+.main-content {
+  &__left {
+    &--crew {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: space-around;
+    }
+  }
+
+  h2 span {
+    display: block;
+  }
+
+  h2 span:first-child {
+    color: hsl(var(--color-primary-white) / 0.2);
+  }
+}

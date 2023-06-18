@@ -3,6 +3,18 @@
 const hamburgerIcon = document.querySelector('.hamburger-icon');
 const navigation = document.querySelector('.primary-navigation');
 
+// When the user clicks outside of the navigation
+document.body.addEventListener('mouseup', (e) => {
+  if (
+    e.target.classList.contains('primary-navigation__list') ||
+    e.target.classList.contains('hamburger-icon') ||
+    e.target.classList.contains('hamburger-icon__layer')
+  )
+    return;
+
+  closeNavigation();
+});
+
 // When the user clicks on the Hamburger Icon
 hamburgerIcon.addEventListener('click', function () {
   const visibility = navigationVisibility();
@@ -19,9 +31,10 @@ document.addEventListener('keydown', (e) => {
 
 /**
  * Check if the navigation is visible or not
+ *
  * @returns boolean
  */
-const navigationVisibility = function () {
+const navigationVisibility = () => {
   return hamburgerIcon.classList.contains('hamburger-icon--close');
 };
 
@@ -36,7 +49,7 @@ const openNavigation = () => {
 /**
  * Allow to close the navigation
  */
-const closeNavigation = function () {
+const closeNavigation = () => {
   hamburgerIcon.classList.remove('hamburger-icon--close');
   navigation.setAttribute('aria-expanded', 'false');
 };

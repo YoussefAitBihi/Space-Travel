@@ -33,3 +33,11 @@ In this section, we are going start to create to create the first page in our de
 # 8. Create Grid Container
 
 In this this section, and before we continue create our pages, we are going to create a grid container for all pages.
+
+# Solve the underline problem, so that can be adapted to all navigators.
+
+#### Hover State
+
+#### Active State
+
+#### Active State

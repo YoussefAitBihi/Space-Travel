@@ -4,9 +4,11 @@
 
   position: relative;
 
-  @include respond($bp-tablet) {
-    margin: 0;
+  padding-block: 3rem;
 
+  @include respond($bp-tablet) {
+    padding-block: 0;
+    padding-bottom: 2rem;
     --gap: 1rem;
   }
 

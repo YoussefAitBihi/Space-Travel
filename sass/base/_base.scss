@@ -37,8 +37,12 @@ h6 {
 // Make images easier to work with
 img,
 picture {
-  max-width: 100%;
-  display: block; // In case we wanna make a space
+  display: block;
+  max-width: 100%; // In case we wanna make a space
+}
+
+picture[hidden] {
+  display: none;
 }
 
 // The form elements don't inherit the fonts by default
@@ -47,6 +51,11 @@ textarea,
 button,
 select {
   font: inherit;
+}
+
+button {
+  border: none;
+  background-color: transparent;
 }
 
 // Revert the 'white-space' property for textarea elements on Safari
